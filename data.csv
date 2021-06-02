@@ -1,0 +1,13 @@
+time,resource_name,vm_name,image,priority,max_price,eviction_policy,size,price
+2021-05-27 08:30:20.764432,roshanHPCCOnSpot,spot-testvm7-roshan,UbuntuLTS,Spot,0.00001,Deallocate,Standard_A4m_v2,0.075684
+2021-05-27 08:30:20.842988,roshanHPCCOnSpot,spot-testvm7-roshan,UbuntuLTS,Spot,0.00001,Deallocate,Standard_NC8as_T4_v3,0.175371
+2021-05-27 08:30:20.899529,roshanHPCCOnSpot,spot-testvm7-roshan,UbuntuLTS,Spot,0.00001,Deallocate,Standard_A8_v2,0.1272
+2021-05-27 08:30:21.357354,roshanHPCCOnSpot,spot-testvm7-roshan,UbuntuLTS,Spot,0.00001,Deallocate,Standard_H8m,0.306625
+2021-05-27 08:30:26.041688,roshanHPCCOnSpot-USWest,spot-testvm7-roshan,UbuntuLTS,Spot,0.00001,Deallocate,Standard_A4m_v2,0.075684
+2021-05-27 08:31:06.475397,roshanHPCCOnSpot-USWest,spot-testvm7-roshan,UbuntuLTS,Spot,0.00001,Deallocate,Standard_A8_v2,0.1272
+2021-05-27 08:31:08.107559,roshanHPCCOnSpot-USWest,spot-testvm7-roshan,UbuntuLTS,Spot,0.00001,Deallocate,Standard_H8m,0.306625
+2021-05-27 08:31:11.161046,roshanHPCCOnSpot-USWest,spot-testvm7-roshan,UbuntuLTS,Spot,0.00001,Deallocate,Standard_NC8as_T4_v3,0.175371
+2021-05-27 08:31:15.745529,roshanHPCCOnSpot-JapanEast,spot-testvm7-roshan,UbuntuLTS,Spot,0.00001,Deallocate,Standard_A4m_v2,0.067359
+2021-05-27 08:31:20.910459,roshanHPCCOnSpot-JapanEast,spot-testvm7-roshan,UbuntuLTS,Spot,0.00001,Deallocate,Standard_A8_v2,0.104594
+2021-05-27 08:31:54.252715,roshanHPCCOnSpot-JapanEast,spot-testvm7-roshan,UbuntuLTS,Spot,0.00001,Deallocate,Standard_NC8as_T4_v3,0.175367
+2021-05-27 08:31:56.490181,roshanHPCCOnSpot-JapanEast,spot-testvm7-roshan,UbuntuLTS,Spot,0.00001,Deallocate,Standard_H8m,0.404012
