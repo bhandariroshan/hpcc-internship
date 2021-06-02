@@ -50,21 +50,26 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     writer = CSVWriter(filename='price.csv', headers=['time', 'region', 'size', 'api_price', 'cli_price'], seperator=',', line_terminator='')
-    now_time = str(datetime.datetime.now())
-    api_price = {}
-    cli_price = {}
+    count = 12
+    while count > 0:
+        count -= 1
+        now_time = str(datetime.datetime.now())
+        api_price = {}
+        cli_price = {}
 
-    if args.method.lower() not in ['api', 'cli', 'both']:
-        parser.error("method must be either of api or cli or both.")
+        if args.method.lower() not in ['api', 'cli', 'both']:
+            parser.error("method must be either of api or cli or both.")
 
-    elif args.method.lower() == 'api':
-        api_price = pull_price_using_api(now_time)
+        elif args.method.lower() == 'api':
+            api_price = pull_price_using_api(now_time)
 
-    elif args.method.lower() == "cli":
-        cli_price = pull_price_using_cli(now_time)
-    
-    else:
-        api_price = pull_price_using_api(now_time)
-        cli_price = pull_price_using_cli(now_time)
+        elif args.method.lower() == "cli":
+            cli_price = pull_price_using_cli(now_time)
+        
+        else:
+            api_price = pull_price_using_api(now_time)
+            cli_price = pull_price_using_cli(now_time)
 
-    save_price_to_file(writer, api_price, cli_price, args.method)
+        save_price_to_file(writer, api_price, cli_price, args.method)
+
+        time.sleep(3600)
