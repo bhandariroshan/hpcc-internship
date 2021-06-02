@@ -58,12 +58,12 @@ def pull_multiple(resource_names, instance_sizes, now_time, is_windows_instances
     global multi_result
     multi_result = [] 
     p = ThreadPool(n_threads)
-    for resource_name in resource_names[:1]: 
-        for size in instance_sizes[:1]:
+    for resource_name in resource_names: 
+        for size in instance_sizes:
             p.apply_async(pull_price, args=(resource_name, size, now_time,), callback=callback)
     
     p.close()
     p.join()
     return multi_result
 
-print(pull_multiple(['ukwest'], sizes, str(datetime.datetime.now())))
+# print(pull_multiple(['ukwest'], sizes, str(datetime.datetime.now())))
