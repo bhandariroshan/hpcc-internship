@@ -1,5 +1,6 @@
 import time
 import datetime
+from pytz import timezone
 import argparse
 from price_puller_azure_api import pull_multiple as pull_mupliple_api
 from price_puller_azure_cli import pull_multiple as pull_mupliple_cli
@@ -41,7 +42,6 @@ def save_price_to_file(writer, api_price, cli_price, method):
         result = cli_price
 
     writer.write_multiple(result)
-    writer.close() 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Get Azure Spot Instance Price')
@@ -53,7 +53,7 @@ if __name__ == '__main__':
     count = 12
     while count > 0:
         count -= 1
-        now_time = str(datetime.datetime.now())
+        now_time = str(datetime.datetime.now(timezone('US/Eastern')))
         api_price = {}
         cli_price = {}
 
@@ -73,3 +73,4 @@ if __name__ == '__main__':
         save_price_to_file(writer, api_price, cli_price, args.method)
 
         time.sleep(3600)
+    writer.close() 

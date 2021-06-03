@@ -1,5 +1,5 @@
-subscription = ''
-subscription_id = ''
+subscription = 'us-hpccplatform-dev'
+subscription_id = 'ec0ba952-4ae9-4f69-b61c-4b96ff470038'
 resource_prefix = 'roshan-test-'
 
 n_threads = 5
