@@ -32,7 +32,7 @@ def pull_price(resource_name, size, now_time):
         size,
         subscription
     )
-    print(command)
+    # print(command)
     status, res = subprocess.getstatusoutput(command) 
 
     result = res.split("is lower than the current spot price")
@@ -51,7 +51,13 @@ def callback(data):
         'region': data[1],
         'size': data[2],
         'cli_price': data[3],
-        'api_price': ''
+        'api_price': '',
+        'pay_as_you_go_price': '',
+        '1_year_reserved_price': '',
+        '3_year_reserved_price': '',
+        '%_saving_pay_as_you_go': '',
+        '%_saving_1y_reserved': '',
+        '%_saving_3y_reserved': ''
     })
 
 def pull_multiple(resource_names, instance_sizes, now_time, is_windows_instances=False):
@@ -66,4 +72,4 @@ def pull_multiple(resource_names, instance_sizes, now_time, is_windows_instances
     p.join()
     return multi_result
 
-# print(pull_multiple(['ukwest'], sizes, str(datetime.datetime.now())))
+# print(pull_multiple(['ukwest'], sizes[:1], str(datetime.datetime.now())))

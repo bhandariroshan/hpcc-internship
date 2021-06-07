@@ -21,7 +21,7 @@ def create_aks_create_cluster(resource_group_name, cluster_name, size):
     print(status, result)
 
 
-def add_node_pool(cluster_name, node_pool_name, spot_max_price, priority, size):
+def add_node_pool(cluster_name, node_pool_name, spot_max_price, priority, price, size):
     command = "az aks nodepool add \
         --resource-group {} \
         --name {} \
@@ -32,6 +32,8 @@ def add_node_pool(cluster_name, node_pool_name, spot_max_price, priority, size):
         --enable-cluster-autoscaler \
         --min-count 1 \
         --max-count 3 \
+        --labels price={} \
+        --tags price={} \
         --node-vm-size {} \
     ".format(
         resource_names[0],
@@ -39,6 +41,8 @@ def add_node_pool(cluster_name, node_pool_name, spot_max_price, priority, size):
         node_pool_name,
         priority,
         spot_max_price,
+        price,
+        price,
         size
     )
 
