@@ -16,6 +16,12 @@ def run(operation, method, region, size, time=None):
     elif operation == "average":
         return find_average_price_of_region_and_size(region, size)
 
+    elif operation == 'findvms':
+       return find_region_and_size_available()
+
+    elif operation == 'findspotvms':
+       return find_spot_region_and_size_available()
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Get Azure Spot Instance Price')
