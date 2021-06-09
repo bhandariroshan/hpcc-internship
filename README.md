@@ -16,11 +16,26 @@ Minimizing the cost of setting up cloud infrastructure is very important for all
 11. Potential spot instance use cases for HPCC Systems related jobs.
 
 
+## Find all VM Instances in different Azure Regions and Sizes Available
 
-### Find all VM Instances in different Azure Regions and Sizes Available
+This allows you to finding all VM instances available in different Azure regions. To view this in command line you can call:
 
-### Find all Spot Instances in different regions and Sizes Available
+`
+	python runcheap.py --operation findvms
+`
 
-### Find Cheapest Region for a given size
+To get the results in your code for programmatic access you can import and use as shown below:
+`
+	from cheapes_region import find_region_and_size_available, find_spot_region_and_size_available()
+	vms = find_region_and_size_available()
 
-### Find Average Price of a size on a region
+	# To get the spot vms
+	spot_vms = find_spot_region_and_size_available()
+`
+The results are returned as a dictionary.
+
+## Find all Spot Instances in different regions and Sizes Available
+
+## Find Cheapest Region for a given size
+
+## Find Average Price of a size on a region
