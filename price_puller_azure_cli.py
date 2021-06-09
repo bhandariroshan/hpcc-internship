@@ -50,14 +50,14 @@ def callback(data):
         'time': data[0],
         'region': data[1],
         'size': data[2],
-        'cli_price': data[3],
-        'api_price': '',
-        'pay_as_you_go_price': '',
-        '1_year_reserved_price': '',
-        '3_year_reserved_price': '',
-        '%_saving_pay_as_you_go': '',
-        '%_saving_1y_reserved': '',
-        '%_saving_3y_reserved': ''
+        'api_price': float('-inf'),
+        'cli_price': data[3] if data[3] else float('-inf'),
+        'pay_as_you_go_price': float('-inf'),
+        '1_year_reserved_price': float('-inf'),
+        '3_year_reserved_price': float('-inf'),
+        '%_saving_pay_as_you_go': float('-inf'),
+        '%_saving_1y_reserved': float('-inf'),
+        '%_saving_3y_reserved': float('-inf')
     })
 
 def pull_multiple(resource_names, instance_sizes, now_time, is_windows_instances=False):

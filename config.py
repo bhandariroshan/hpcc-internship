@@ -58,12 +58,13 @@ region_codes = [
     'eastasia',
     'brazilsouth',
     'canadacentral',
-    'australiaeast'
+    'australiaeast',
+    'australiacentral'
 ]
 
 
 sizes = [
-    "Standard_A4m_v2",        # 4 vCPU, 32 Gb Ram
+    "Standard_D2s_v3",        # 4 vCPU, 32 Gb Ram
     "Standard_A8_v2",         # 8 vCPU, 16 Gb Ram
     "Standard_NC8as_T4_v3",    # 8   56 GiB"
     "Standard_NV6s_v2",

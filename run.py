@@ -26,11 +26,11 @@ def save_price_to_database(dbobj, api_price, cli_price, method):
                 if each_cli_price['size'].replace('Standard_', '').replace('_', ' ') == each_api_price['size'] and \
                     each_api_price['region'] == each_cli_price['region'].replace(resource_prefix, ''):
                     result = (
+                            each_api_price['time'],
+                            each_api_price['region'],
                             each_cli_price['size'], 
                             each_api_price['api_price'], 
                             each_cli_price['cli_price'],
-                            each_api_price['region'],
-                            each_api_price['time'],
                             each_api_price['pay_as_you_go_price'],
                             each_api_price['1_year_reserved_price'],
                             each_api_price['3_year_reserved_price'],
@@ -45,11 +45,11 @@ def save_price_to_database(dbobj, api_price, cli_price, method):
         datas = api_price or cli_price
         for data in datas:
             result = (
+                    data['time'],
+                    data['region'],
                     data['size'], 
                     data['api_price'], 
                     data['cli_price'],
-                    data['region'],
-                    data['time'],
                     data['pay_as_you_go_price'],
                     data['1_year_reserved_price'],
                     data['3_year_reserved_price'],
@@ -91,31 +91,19 @@ def save_price_to_file(writer, api_price, cli_price, method):
 
     writer.write_multiple(result)
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Get Azure Spot Instance Price')
-    parser.add_argument('method', type=str,
-                help='Can be one of API or CLI. \
-                \n API: Pull azure Spot price from API. \
-                \n CLI: Pull azure spot price from CLI.'
-            )
-
-    parser.add_argument('saveto', type=str,
-                    help='Can be one of db or csv. \
-                    \n db: To store the data in sqlite databse. \
-                    \n csv: To store the data in csv file.'
-                )
-
-    args = parser.parse_args()
+def run(method, saveto, days=1, hours=1):
+    if days > 1:
+        hours = 24
 
     count = 0
-    while count < 2:
+    while count < days * hours:
         writeheader = False
         mode = 'a'
         if count == 0:
             writeheader = True
             mode = 'w'
 
-        if args.saveto.lower() == 'csv':
+        if saveto.lower() == 'csv':
             writer = CSVWriter(
                 filename='price.csv', 
                 headers=[
@@ -145,24 +133,61 @@ if __name__ == '__main__':
         api_price = {}
         cli_price = {}
 
-        if args.method.lower() not in ['api', 'cli', 'both']:
+        if method.lower() not in ['api', 'cli', 'both']:
             parser.error("method must be either of api or cli or both.")
 
-        elif args.method.lower() == 'api':
+        elif method.lower() == 'api':
             api_price = pull_price_using_api(now_time)
 
-        elif args.method.lower() == "cli":
+        elif method.lower() == "cli":
             cli_price = pull_price_using_cli(now_time)
         
         else:
             api_price = pull_price_using_api(now_time)
             cli_price = pull_price_using_cli(now_time)
 
-        if args.saveto.lower() == 'csv':
-            save_price_to_file(writer, api_price, cli_price, args.method)
+        if saveto.lower() == 'csv':
+            save_price_to_file(writer, api_price, cli_price, method)
             writer.close()
         else:
-            save_price_to_database(dbobj, api_price, cli_price, args.method)
+            save_price_to_database(dbobj, api_price, cli_price, method)
 
-        print('sleeping')
+        print('sleeping..')
         time.sleep(60*60)
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Get Azure Spot Instance Price')
+    parser.add_argument(
+        '--method', 
+        type=str, 
+        default='--api',
+        help='Can be one of API or CLI. \
+            \n API: Pull azure Spot price from API. \
+            \n CLI: Pull azure spot price from CLI.'
+    )
+
+    parser.add_argument(
+        '--saveto', 
+        type=str, 
+        default="db",
+        help='Can be one of db or csv. \
+            \n db: To store the data in sqlite databse. \
+            \n csv: To store the data in csv file.'
+    )
+
+    parser.add_argument(
+        '--days', 
+        type=int,
+        help='Number of days to run.',
+        default=1
+    )
+
+    parser.add_argument(
+        '--hours', 
+        default=1,
+        type=int,
+        help='Number of days to run.',
+    )
+
+    args = parser.parse_args()
+    run(args.method, args.saveto, args.days, args.hours)
