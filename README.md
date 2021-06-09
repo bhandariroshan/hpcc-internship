@@ -17,10 +17,10 @@ Minimizing the cost of setting up cloud infrastructure is very important for all
 
 
 
-# Find all VM Instances in different Azure Regions and Sizes Available
+## Find all VM Instances in different Azure Regions and Sizes Available
 
-# Find all Spot Instances in different regions and Sizes Available
+## Find all Spot Instances in different regions and Sizes Available
 
-# Find Cheapest Region for a given size
+## Find Cheapest Region for a given size
 
-# Find Average Price of a size on a region
+## Find Average Price of a size on a region
