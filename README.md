@@ -26,14 +26,14 @@ This allows you to finding all VM instances available in different Azure regions
 
 To get the results in your code for programmatic access you can import and use as shown below:
 `
-from cheapes_region import find_region_and_size_available\
+from cheapes_region import find_region_and_size_available  
 vms = find_region_and_size_available()
 `
 
 To get the spot vms:
 
 `
-from cheapes_region import find_spot_region_and_size_available\
+from cheapes_region import find_spot_region_and_size_available  
 spot_vms = find_spot_region_and_size_available()
 `
 
