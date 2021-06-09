@@ -21,7 +21,7 @@ Minimizing the cost of setting up cloud infrastructure is very important for all
 This allows you to finding all VM instances available in different Azure regions. To view this in command line you can call:
 
 ```
-	python runcheap.py --operation findvms
+python runcheap.py --operation findvms
 ```
 
 To get the results in your code for programmatic access you can import and use as shown below:
