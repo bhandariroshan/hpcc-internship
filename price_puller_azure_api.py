@@ -5,7 +5,7 @@ from config import n_threads
 
 
 multi_result = []
-def pull_price(region_name, instance_size, now_time, is_windows_instance=False):
+def pull_price(region_name, instance_size, now_time=str(datetime.datetime.now()), is_windows_instance=False):
     region_name = region_name
     instance_size = instance_size
     is_windows_instance = is_windows_instance
@@ -27,7 +27,7 @@ def pull_price(region_name, instance_size, now_time, is_windows_instance=False):
 
     regular_data = requests.get(regular_end_point).json()
     spot_data = requests.get(spot_end_point).json() 
-    return_data = []
+    return_data = [now_time, region_name, instance_size, '', '', '', '']
 
     for each_instance in spot_data['Items']:
         if not is_windows_instance and 'windows' not in each_instance['productName'].lower():
@@ -51,9 +51,6 @@ def pull_price(region_name, instance_size, now_time, is_windows_instance=False):
                 '',
                 ''
             ]
-
-        else:
-            return_data = [now_time, region_name, instance_size, '', '', '', '']
 
     for each_instance in regular_data['Items']:
         if not is_windows_instance and 'windows' not in each_instance['productName'].lower() and \
