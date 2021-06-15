@@ -129,7 +129,7 @@ class PriceView(APIView):
         elif operation.lower() == 'average' and region and size and not days:
             data = find_average_price_of_region_and_size(region, size)
         
-        elif operation.lower() == 'average' and region and size and days::
+        elif operation.lower() == 'average' and region and size and days:
             data = find_average_price_of_region_and_size(region, size, days)
         
         return JsonResponse(data)
