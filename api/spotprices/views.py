@@ -6,8 +6,7 @@ from django.shortcuts import render
 from django.contrib.auth import authenticate
 
 # from rest_framework.authentication import SessionAuthentication, BasicAuthentication
-# from rest_framework.permissions import IsAuthenticated
-from rest_framework.response import Responsep
+# from rest_framework.permissions import IsAuthenticated 
 from rest_framework.views import APIView 
 from django.http import JsonResponse
 
