@@ -7,7 +7,7 @@ from django.contrib.auth import authenticate
 
 # from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 # from rest_framework.permissions import IsAuthenticated
-from rest_framework.response import Response
+from rest_framework.response import Responsep
 from rest_framework.views import APIView 
 from django.http import JsonResponse
 
@@ -110,24 +110,26 @@ def find_cheapest_region_at_sometime(size, days):
 
 
 # Create your views here.
-class CheapestRegionView(APIView):
+class PriceView(APIView):
     permission_classes = [] # + [IsAuthenticated]
 
-    def get(self, request, size, days=None): 
-        if not days:
+    def get(self, request):
+        operation = request.GET.get('operation', None)
+        region = request.GET.get('region', None)
+        size = request.GET.get('size', None)
+        days = request.GET.get('days', None)
+
+        data = {}
+        if operation.lower() == 'cheapest' and size and not days:
             data = find_cheapest_region_at_current_time_using_api(size)
-        else:
+        
+        elif operation.lower() == 'cheapest' and size and days:
             data = find_cheapest_region_at_sometime(size, days)
-        return JsonResponse(data)
 
-# Create your views here.
-class AveragePriceView(APIView):
-    permission_classes = [] # + [IsAuthenticated]
-    
-    def get(self, request, region, size, days=None):
-        if not days:
+        elif operation.lower() == 'average' and region and size and not days:
             data = find_average_price_of_region_and_size(region, size)
-        else:
+        
+        elif operation.lower() == 'average' and region and size and days::
             data = find_average_price_of_region_and_size(region, size, days)
-
+        
         return JsonResponse(data)

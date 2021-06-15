@@ -4,26 +4,26 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
-from spotprices.views import CheapestRegionView, AveragePriceView
+from spotprices.views import PriceView
 from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"), 
     path(
-        "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
+        "price/", PriceView.as_view(), name="cheapestregion"
     ),
-    path(
-        "cheapest/region/<size>", CheapestRegionView.as_view(), name="cheapestregion"
-    ),
-    path(
-        "cheapest/region/<size>/<days>", CheapestRegionView.as_view(), name="cheapestregiondays"
-    ),
-    path(
-        "averageprice/<region>/<size>", AveragePriceView.as_view(), name="averageprice"
-    ),
-    path(
-        "averageprice/<region>/<size>/<days>", AveragePriceView.as_view(), name="averagepricedays"
-    ),
+    # path(
+    #     "cheapest/region/<size>", CheapestRegionView.as_view(), name="cheapestregion"
+    # ),
+    # path(
+    #     "cheapest/region/<size>/<days>", CheapestRegionView.as_view(), name="cheapestregiondays"
+    # ),
+    # path(
+    #     "averageprice/<region>/<size>", AveragePriceView.as_view(), name="averageprice"
+    # ),
+    # path(
+    #     "averageprice/<region>/<size>/<days>", AveragePriceView.as_view(), name="averagepricedays"
+    # ),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
