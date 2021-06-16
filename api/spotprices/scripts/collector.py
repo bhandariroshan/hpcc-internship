@@ -60,7 +60,7 @@ def save_price_to_database(api_price, cli_price, method):
             sp.save()
 
 def run():
-    method = "cli"
+    method = "api"
 
     now_time = str(datetime.datetime.now(timezone('US/Eastern')))
     api_price = {}
