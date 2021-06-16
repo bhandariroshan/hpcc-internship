@@ -9,21 +9,21 @@ class SpotPrices(models.Model):
     id = models.AutoField(primary_key=True)
     size = models.CharField(max_length=200)
 
-    api_price =  models.FloatField()
-    cli_price =  models.FloatField(max_length=10)
-    region =  models.CharField(max_length=200)
+    region =  models.CharField(max_length=100)
     time =  models.CharField(max_length=200)
 
-    pay_as_you_go_price =  models.FloatField()
-    one_year_reserved_price =  models.FloatField()
-    three_year_reserved_price =  models.FloatField()
+    api_price =  models.FloatField(default=float('-inf'))
+    cli_price =  models.FloatField(default=float('-inf'))
 
-    per_saving_paygo =  models.CharField(max_length=200)
-    per_saving_one =   models.CharField(max_length=200)
-    per_saving_three =  models.CharField(max_length=200)
+    pay_as_you_go_price = models.FloatField(default=float('-inf'))
+    one_year_reserved_price = models.FloatField(default=float('-inf'))
+    three_year_reserved_price = models.FloatField(default=float('-inf'))
 
+    per_saving_paygo = models.FloatField(default=float('-inf'))
+    per_saving_one = models.FloatField(default=float('-inf'))
+    per_saving_three = models.FloatField(default=float('-inf'))
 
-    # Meta and Strings = 
+    # Meta and Strings
     class Meta:
         """ Meta data for Exam Evaluation Criteria model"""
         verbose_name = _('SpotPrice')
