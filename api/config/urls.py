@@ -12,18 +12,6 @@ urlpatterns = [
     path(
         "price/", PriceView.as_view(), name="cheapestregion"
     ),
-    # path(
-    #     "cheapest/region/<size>", CheapestRegionView.as_view(), name="cheapestregion"
-    # ),
-    # path(
-    #     "cheapest/region/<size>/<days>", CheapestRegionView.as_view(), name="cheapestregiondays"
-    # ),
-    # path(
-    #     "averageprice/<region>/<size>", AveragePriceView.as_view(), name="averageprice"
-    # ),
-    # path(
-    #     "averageprice/<region>/<size>/<days>", AveragePriceView.as_view(), name="averagepricedays"
-    # ),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     # User management

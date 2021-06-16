@@ -5,8 +5,7 @@ from django.utils.text import slugify
 from django.contrib.postgres.fields import JSONField
 
  
-class SpotPrices(models.Model):
-    id = models.AutoField(primary_key=True)
+class SpotPrices(models.Model): 
     size = models.CharField(max_length=200)
 
     region =  models.CharField(max_length=100)
