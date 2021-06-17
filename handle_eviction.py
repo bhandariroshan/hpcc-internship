@@ -4,13 +4,14 @@ import json
 import socket
 # import urllib2
 import requests
+import time
 
 metadata_url = "http://169.254.169.254/metadata/scheduledevents?api-version=2019-08-01"
 this_host = socket.gethostname()
 
 def test():
     user, passwd = 'admin', '@dmin123#'
-    url = 'http://157.56.182.115/eviction/'
+    url = 'http://localhost:8000/eviction/'
     count = 0
     while True:
         machine_started = False
@@ -38,6 +39,8 @@ def test():
         )
 
         count += 1
+
+        time.sleep(30)
 
 # def get_scheduled_events():
 #     req = urllib2.Request(metadata_url)

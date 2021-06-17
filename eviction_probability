@@ -1,0 +1,3279 @@
+1
+General purpose
+1
+1.75
+2
+2x500
+70
+Not supported
+0-5%
+$0.01657 (80%)
+A1_Basic
+General purpose
+1
+1.75
+2
+2x500
+40
+Not supported
+0-5%
+$0.00573 (82%)
+A1_v2
+General purpose
+1
+2
+2
+2x500
+10
+Not supported
+0-5%
+$0.01199 (78%)
+A2
+General purpose
+2
+3.5
+4
+4x500
+135
+Not supported
+0-5%
+$0.03314 (80%)
+A2_Basic
+General purpose
+2
+3.5
+4
+4x500
+60
+Not supported
+0-5%
+$0.01951 (82%)
+A2_v2
+General purpose
+2
+4
+4
+4x500
+20
+Not supported
+0-5%
+$0.02510 (78%)
+A2m_v2
+General purpose
+2
+16
+4
+4x500
+20
+Not supported
+0-5%
+$0.03398 (78%)
+A5
+General purpose
+2
+14
+4
+4x500
+135
+Not supported
+0-5%
+$0.05749 (80%)
+A3
+General purpose
+4
+7
+8
+8x500
+285
+Not supported
+0-5%
+$0.06629 (80%)
+A3_Basic
+General purpose
+4
+7
+8
+8x500
+120
+Not supported
+0-5%
+$0.04940 (82%)
+A4_v2
+General purpose
+4
+8
+8
+8x500
+40
+Not supported
+0-5%
+$0.05286 (78%)
+A4m_v2
+General purpose
+4
+32
+8
+8x500
+40
+Not supported
+0-5%
+$0.07152 (78%)
+A6
+General purpose
+4
+28
+8
+8x500
+285
+Not supported
+0-5%
+$0.11498 (80%)
+A4
+General purpose
+8
+14
+16
+16x500
+605
+Not supported
+0-5%
+$0.13257 (80%)
+A4_Basic
+General purpose
+8
+14
+16
+16x500
+240
+Not supported
+0-5%
+$0.09881 (82%)
+A7
+General purpose
+8
+56
+16
+16x500
+605
+Not supported
+0-5%
+$0.22996 (80%)
+A8_v2
+General purpose
+8
+16
+16
+16x500
+80
+Not supported
+0-5%
+$0.11105 (78%)
+A8m_v2
+General purpose
+8
+64
+16
+16x500
+80
+Not supported
+0-5%
+$0.15036 (78%)
+D1_v2
+General purpose
+1
+3.5
+4
+4x500
+50
+Not supported
+10-15%
+$0.02142 (79%)
+D2_v2
+General purpose
+2
+7
+8
+8x500
+100
+Not supported
+0-5%
+$0.04305 (79%)
+D2_v3
+General purpose
+2
+8
+4
+4x500
+50
+Not supported
+0-5%
+$0.03864 (70%)
+D2_v4
+General purpose
+2
+8
+4
+3200
+0
+Not supported
+0-5%
+$0.01688 (86%)
+D2_v4
+General purpose
+2
+8
+4
+3200
+0
+Not supported
+0-5%
+$0.01688 (86%)
+D2a_v4
+General purpose
+2
+8
+4
+4x500
+50
+Not supported
+10-15%
+$0.02531 (80%)
+D2as_v4
+General purpose
+2
+8
+4
+3200
+16
+Supported
+20+%
+$0.02531 (80%)
+D2d_v4
+General purpose
+2
+8
+4
+4x500
+75
+Not supported
+0-5%
+$0.03749 (74%)
+D2ds_v4
+General purpose
+2
+8
+4
+3200
+75
+Supported
+0-5%
+$0.03749 (74%)
+D2s_v3
+General purpose
+2
+8
+4
+3200
+16
+Supported
+5-10%
+$0.03864 (70%)
+D2s_v4
+General purpose
+2
+8
+4
+3200
+0
+Supported
+0-5%
+$0.01688 (86%)
+D11_v2
+Memory optimized
+2
+14
+8
+8x500
+100
+Not supported
+0-5%
+$0.05304 (77%)
+D3_v2
+General purpose
+4
+14
+16
+16x500
+200
+Not supported
+0-5%
+$0.08589 (79%)
+D4_v3
+General purpose
+4
+16
+8
+8x500
+100
+Not supported
+5-10%
+$0.07727 (70%)
+D4_v4
+General purpose
+4
+16
+8
+6400
+0
+Not supported
+0-5%
+$0.03375 (86%)
+D4a_v4
+General purpose
+4
+16
+8
+8x500
+100
+Not supported
+0-5%
+$0.05061 (80%)
+D4as_v4
+General purpose
+4
+16
+8
+6400
+32
+Supported
+0-5%
+$0.05061 (80%)
+D4d_v4
+General purpose
+4
+16
+8
+8x500
+150
+Not supported
+0-5%
+$0.07499 (74%)
+D4ds_v4
+General purpose
+4
+16
+8
+6400
+150
+Supported
+0-5%
+$0.07499 (74%)
+D4s_v3
+General purpose
+4
+16
+8
+6400
+32
+Supported
+15-20%
+$0.07727 (70%)
+D4s_v4
+General purpose
+4
+16
+8
+6400
+0
+Supported
+0-5%
+$0.03375 (86%)
+D12_v2
+Memory optimized
+4
+28
+16
+16x500
+200
+Not supported
+0-5%
+$0.10630 (77%)
+D4_v2
+General purpose
+8
+28
+32
+32x500
+400
+Not supported
+0-5%
+$0.17178 (79%)
+D8_v3
+General purpose
+8
+32
+16
+16x500
+200
+Not supported
+5-10%
+$0.15454 (70%)
+D8_v3
+General purpose
+8
+32
+16
+16x500
+200
+Not supported
+5-10%
+$0.15454 (70%)
+D8_v4
+General purpose
+8
+32
+16
+12800
+0
+Not supported
+0-5%
+$0.06751 (86%)
+D8a_v4
+General purpose
+8
+32
+16
+16x500
+200
+Not supported
+0-5%
+$0.10122 (80%)
+D8as_v4
+General purpose
+8
+32
+16
+12800
+64
+Supported
+0-5%
+$0.10122 (80%)
+D8d_v4
+General purpose
+8
+32
+16
+16x500
+300
+Not supported
+0-5%
+$0.14997 (74%)
+D8ds_v4
+General purpose
+8
+32
+16
+12800
+300
+Supported
+0-5%
+$0.14997 (74%)
+D8s_v3
+General purpose
+8
+32
+16
+12800
+64
+Supported
+10-15%
+$0.15454 (70%)
+D8s_v4
+General purpose
+8
+32
+16
+12800
+0
+Supported
+5-10%
+$0.06751 (86%)
+D13_v2
+Memory optimized
+8
+56
+32
+32x500
+400
+Not supported
+0-5%
+$0.21261 (77%)
+D5_v2
+General purpose
+16
+56
+64
+64x500
+800
+Not supported
+0-5%
+$0.34356 (79%)
+D14_v2
+Memory optimized
+16
+112
+64
+64x500
+800
+Not supported
+5-10%
+$0.42499 (77%)
+D16_v3
+General purpose
+16
+64
+32
+32x500
+400
+Not supported
+10-15%
+$0.30908 (70%)
+D16_v4
+General purpose
+16
+64
+32
+25600
+0
+Not supported
+5-10%
+$0.13501 (86%)
+D16a_v4
+General purpose
+16
+64
+32
+32x500
+400
+Not supported
+0-5%
+$0.20244 (80%)
+D16as_v4
+General purpose
+16
+64
+32
+25600
+128
+Supported
+0-5%
+$0.20244 (80%)
+D16d_v4
+General purpose
+16
+64
+32
+32x500
+600
+Not supported
+0-5%
+$0.29994 (74%)
+D16ds_v4
+General purpose
+16
+64
+32
+25600
+600
+Supported
+0-5%
+$0.29994 (74%)
+D16s_v3
+General purpose
+16
+64
+32
+25600
+128
+Supported
+5-10%
+$0.30908 (70%)
+D16s_v4
+General purpose
+16
+64
+32
+25600
+0
+Supported
+0-5%
+$0.13501 (86%)
+D15_v2
+Memory optimized
+20
+140
+64
+64x500
+1000
+Not supported
+0-5%
+$0.53129 (77%)
+D32_v3
+General purpose
+32
+128
+32
+32x500
+800
+Not supported
+0-5%
+$0.61817 (70%)
+D32_v4
+General purpose
+32
+128
+32
+51200
+0
+Not supported
+0-5%
+$0.27002 (86%)
+D32a_v4
+General purpose
+32
+128
+32
+32x500
+800
+Not supported
+0-5%
+$0.40489 (80%)
+D32a_v4
+General purpose
+32
+128
+32
+32x500
+800
+Not supported
+0-5%
+$0.40489 (80%)
+D32as_v4
+General purpose
+32
+128
+32
+51200
+256
+Supported
+0-5%
+$0.40489 (80%)
+D32d_v4
+General purpose
+32
+128
+32
+32x500
+1200
+Not supported
+0-5%
+$0.59988 (74%)
+D32ds_v4
+General purpose
+32
+128
+32
+51200
+1200
+Supported
+0-5%
+$0.59988 (74%)
+D32s_v3
+General purpose
+32
+128
+32
+51200
+256
+Supported
+15-20%
+$0.61817 (70%)
+D32s_v4
+General purpose
+32
+128
+32
+51200
+0
+Supported
+0-5%
+$0.27002 (86%)
+D48_v3
+General purpose
+48
+192
+32
+32x500
+1200
+Not supported
+0-5%
+$0.92725 (70%)
+D48_v4
+General purpose
+48
+192
+32
+76800
+0
+Not supported
+0-5%
+$0.40503 (86%)
+D48a_v4
+General purpose
+48
+192
+32
+32x500
+1200
+Not supported
+0-5%
+$0.60733 (80%)
+D48as_v4
+General purpose
+48
+192
+32
+76800
+384
+Supported
+0-5%
+$0.60733 (80%)
+D48d_v4
+General purpose
+48
+192
+32
+32x500
+1800
+Not supported
+0-5%
+$0.89983 (74%)
+D48d_v4
+General purpose
+48
+192
+32
+32x500
+1800
+Not supported
+0-5%
+$0.89983 (74%)
+D48ds_v4
+General purpose
+48
+192
+32
+76800
+1800
+Supported
+0-5%
+$0.89983 (74%)
+D48s_v3
+General purpose
+48
+192
+32
+76800
+384
+Supported
+0-5%
+$0.92725 (70%)
+D48s_v4
+General purpose
+48
+192
+32
+76800
+0
+Supported
+0-5%
+$0.40503 (86%)
+D64_v3
+General purpose
+64
+256
+32
+32x500
+1600
+Not supported
+0-5%
+$1.23634 (70%)
+D64_v4
+General purpose
+64
+256
+32
+80000
+0
+Not supported
+0-5%
+$0.54004 (86%)
+D64a_v4
+General purpose
+64
+256
+32
+32x500
+1600
+Not supported
+0-5%
+$0.80978 (80%)
+D64as_v4
+General purpose
+64
+256
+32
+80000
+512
+Supported
+0-5%
+$0.80978 (80%)
+D64d_v4
+General purpose
+64
+256
+32
+32x500
+2400
+Not supported
+0-5%
+$1.19977 (74%)
+D64ds_v4
+General purpose
+64
+256
+32
+80000
+2400
+Supported
+10-15%
+$1.19977 (74%)
+D64s_v3
+General purpose
+64
+256
+32
+80000
+512
+Supported
+0-5%
+$1.23634 (70%)
+D64s_v4
+General purpose
+64
+256
+32
+80000
+0
+Supported
+0-5%
+$0.54004 (86%)
+D96a_v4
+General purpose
+96
+384
+32
+32x500
+2400
+Not supported
+0-5%
+$1.21467 (80%)
+D96as_v4
+General purpose
+96
+384
+32
+80000
+768
+Supported
+0-5%
+$1.21467 (80%)
+DS1_v2
+General purpose
+1
+3.5
+4
+3200
+7
+Supported
+10-15%
+$0.02142 (79%)
+DS11-1_v2
+Memory optimized
+1
+14
+8
+6400
+28
+Supported
+0-5%
+$0.05304 (77%)
+DS12-1_v2
+Memory optimized
+1
+28
+16
+12800
+56
+Supported
+0-5%
+$0.10630 (77%)
+DS2_v2
+General purpose
+2
+7
+8
+6400
+14
+Supported
+15-20%
+$0.04305 (79%)
+DS11_v2
+Memory optimized
+2
+14
+8
+6400
+28
+Supported
+0-5%
+$0.05304 (77%)
+DS12-2_v2
+Memory optimized
+2
+28
+16
+12800
+56
+Supported
+0-5%
+$0.10630 (77%)
+DS13-2_v2
+Memory optimized
+2
+56
+32
+25600
+112
+Supported
+0-5%
+$0.21261 (77%)
+DS3_v2
+General purpose
+4
+14
+16
+12800
+28
+Supported
+0-5%
+$0.08589 (79%)
+DS12_v2
+Memory optimized
+4
+28
+16
+12800
+56
+Supported
+0-5%
+$0.10630 (77%)
+DS13-4_v2
+Memory optimized
+4
+56
+32
+25600
+112
+Supported
+0-5%
+$0.21261 (77%)
+DS14-4_v2
+Memory optimized
+4
+112
+64
+51200
+224
+Supported
+0-5%
+$0.42499 (77%)
+DS4_v2
+General purpose
+8
+28
+32
+25600
+56
+Supported
+0-5%
+$0.17178 (79%)
+DS13_v2
+Memory optimized
+8
+56
+32
+25600
+112
+Supported
+5-10%
+$0.21261 (77%)
+DS14-8_v2
+Memory optimized
+8
+112
+64
+51200
+224
+Supported
+0-5%
+$0.42499 (77%)
+DS5_v2
+General purpose
+16
+56
+64
+51200
+112
+Supported
+5-10%
+$0.34356 (79%)
+DS14_v2
+Memory optimized
+16
+112
+64
+51200
+224
+Supported
+0-5%
+$0.42499 (77%)
+DS15_v2
+Memory optimized
+20
+140
+64
+64000
+280
+Supported
+0-5%
+$0.53129 (77%)
+E2_v3
+Memory optimized
+2
+16
+4
+4x500
+50
+Not supported
+5-10%
+$0.04426 (72%)
+E2_v4
+Memory optimized
+2
+16
+4
+3200
+0
+Not supported
+0-5%
+$0.01844 (88%)
+E2a_v4
+Memory optimized
+2
+16
+4
+4x500
+50
+Not supported
+0-5%
+$0.01844 (88%)
+E2as_v4
+Memory optimized
+2
+16
+4
+3200
+32
+Supported
+0-5%
+$0.01844 (88%)
+E2d_v4
+Memory optimized
+2
+16
+4
+4x500
+75
+Not supported
+0-5%
+$0.02105 (88%)
+E2ds_v4
+Memory optimized
+2
+16
+4
+3200
+75
+Supported
+10-15%
+$0.02105 (88%)
+E2s_v3
+Memory optimized
+2
+16
+4
+3200
+32
+Supported
+5-10%
+$0.04426 (72%)
+E2s_v4
+Memory optimized
+2
+16
+4
+3200
+0
+Supported
+0-5%
+$0.01844 (88%)
+E4-2as_v4
+2
+32
+8
+6400
+64
+Supported
+0-5%
+$0.03688 (88%)
+E4-2ds_v4
+Memory optimized
+2
+32
+8
+6400
+150
+Supported
+0-5%
+$0.04211 (88%)
+E4-2s_v3
+Memory optimized
+2
+32
+8
+6400
+64
+Supported
+20+%
+$0.08851 (72%)
+E4-2s_v4
+Memory optimized
+2
+32
+8
+6400
+0
+Supported
+0-5%
+$0.03688 (88%)
+E8-2as_v4
+2
+64
+16
+12800
+128
+Supported
+0-5%
+$0.07375 (88%)
+E8-2ds_v4
+Memory optimized
+2
+64
+16
+12800
+300
+Supported
+0-5%
+$0.08422 (88%)
+E8-2s_v3
+Memory optimized
+2
+64
+16
+12800
+128
+Supported
+0-5%
+$0.17702 (72%)
+E8-2s_v4
+Memory optimized
+2
+64
+16
+12800
+0
+Supported
+0-5%
+$0.07375 (88%)
+E4_v3
+Memory optimized
+4
+32
+8
+8x500
+100
+Not supported
+20+%
+$0.08851 (72%)
+E4_v4
+Memory optimized
+4
+32
+8
+6400
+0
+Not supported
+0-5%
+$0.03688 (88%)
+E4a_v4
+Memory optimized
+4
+32
+8
+8x500
+100
+Not supported
+0-5%
+$0.03688 (88%)
+E4as_v4
+Memory optimized
+4
+32
+8
+6400
+64
+Supported
+0-5%
+$0.03688 (88%)
+E4d_v4
+Memory optimized
+4
+32
+8
+8x500
+150
+Not supported
+0-5%
+$0.04211 (88%)
+E4ds_v4
+Memory optimized
+4
+32
+8
+6400
+150
+Supported
+0-5%
+$0.04211 (88%)
+E4s_v3
+Memory optimized
+4
+32
+8
+6400
+64
+Supported
+20+%
+$0.08851 (72%)
+E4s_v4
+Memory optimized
+4
+32
+8
+6400
+0
+Supported
+5-10%
+$0.03688 (88%)
+E8-4as_v4
+4
+64
+16
+12800
+128
+Supported
+0-5%
+$0.07375 (88%)
+E8-4ds_v4
+Memory optimized
+4
+64
+16
+12800
+300
+Supported
+0-5%
+$0.08422 (88%)
+E8-4s_v3
+Memory optimized
+4
+64
+16
+12800
+128
+Supported
+0-5%
+$0.17702 (72%)
+E8-4s_v4
+Memory optimized
+4
+64
+16
+12800
+0
+Supported
+0-5%
+$0.07375 (88%)
+E16-4as_v4
+4
+128
+32
+25600
+256
+Supported
+0-5%
+$0.14750 (88%)
+E16-4ds_v4
+Memory optimized
+4
+128
+32
+25600
+600
+Supported
+0-5%
+$0.16843 (88%)
+E16-4s_v3
+Memory optimized
+4
+128
+32
+25600
+256
+Supported
+20+%
+$0.35405 (72%)
+E16-4s_v4
+Memory optimized
+4
+128
+32
+25600
+0
+Supported
+0-5%
+$0.14750 (88%)
+E8_v3
+Memory optimized
+8
+64
+16
+16x500
+200
+Not supported
+0-5%
+$0.17702 (72%)
+E8_v4
+Memory optimized
+8
+64
+16
+12800
+0
+Not supported
+0-5%
+$0.07375 (88%)
+E8a_v4
+Memory optimized
+8
+64
+16
+16x500
+200
+Not supported
+0-5%
+$0.07375 (88%)
+E8as_v4
+Memory optimized
+8
+64
+16
+12800
+128
+Supported
+0-5%
+$0.07375 (88%)
+E8d_v4
+Memory optimized
+8
+64
+16
+16x500
+300
+Not supported
+0-5%
+$0.08422 (88%)
+E8ds_v4
+Memory optimized
+8
+64
+16
+12800
+300
+Supported
+0-5%
+$0.08422 (88%)
+E8s_v3
+Memory optimized
+8
+64
+16
+12800
+128
+Supported
+0-5%
+$0.17702 (72%)
+E8s_v4
+Memory optimized
+8
+64
+16
+12800
+0
+Supported
+20+%
+$0.07375 (88%)
+E16-8as_v4
+8
+128
+32
+25600
+256
+Supported
+0-5%
+$0.14750 (88%)
+E16-8ds_v4
+Memory optimized
+8
+128
+32
+25600
+600
+Supported
+0-5%
+$0.16843 (88%)
+E16-8s_v3
+Memory optimized
+8
+128
+32
+25600
+256
+Supported
+0-5%
+$0.35405 (72%)
+E16-8s_v4
+Memory optimized
+8
+128
+32
+25600
+0
+Supported
+0-5%
+$0.14750 (88%)
+E32-8as_v4
+8
+256
+32
+51200
+512
+Supported
+0-5%
+$0.29500 (88%)
+E32-8ds_v4
+Memory optimized
+8
+256
+32
+51200
+1200
+Supported
+0-5%
+$0.33686 (88%)
+E32-8s_v3
+Memory optimized
+8
+256
+32
+51200
+512
+Supported
+0-5%
+$0.70810 (72%)
+E32-8s_v4
+Memory optimized
+8
+256
+32
+51200
+0
+Supported
+0-5%
+$0.29500 (88%)
+E16_v3
+Memory optimized
+16
+128
+32
+32x500
+400
+Not supported
+0-5%
+$0.35405 (72%)
+E16_v4
+Memory optimized
+16
+128
+32
+25600
+0
+Not supported
+0-5%
+$0.14750 (88%)
+E16a_v4
+Memory optimized
+16
+128
+32
+32x500
+400
+Not supported
+0-5%
+$0.14750 (88%)
+E16as_v4
+Memory optimized
+16
+128
+32
+25600
+256
+Supported
+0-5%
+$0.14750 (88%)
+E16d_v4
+Memory optimized
+16
+128
+32
+32x500
+600
+Not supported
+0-5%
+$0.16843 (88%)
+E16ds_v4
+Memory optimized
+16
+128
+32
+25600
+600
+Supported
+0-5%
+$0.16843 (88%)
+E16s_v3
+Memory optimized
+16
+128
+32
+25600
+256
+Supported
+0-5%
+$0.35405 (72%)
+E16s_v4
+Memory optimized
+16
+128
+32
+25600
+0
+Supported
+0-5%
+$0.14750 (88%)
+E32-16as_v4
+16
+256
+32
+51200
+512
+Supported
+0-5%
+$0.29500 (88%)
+E32-16ds_v4
+Memory optimized
+16
+256
+32
+51200
+1200
+Supported
+0-5%
+$0.33686 (88%)
+E32-16s_v3
+Memory optimized
+16
+256
+32
+51200
+512
+Supported
+0-5%
+$0.70810 (72%)
+E32-16s_v4
+Memory optimized
+16
+256
+32
+51200
+0
+Supported
+0-5%
+$0.29500 (88%)
+E64-16as_v4
+16
+512
+32
+80000
+864
+Supported
+0-5%
+$0.59000 (88%)
+E64-16ds_v4
+Memory optimized
+16
+504
+32
+80000
+2400
+Supported
+0-5%
+$0.67373 (88%)
+E64-16s_v3
+Memory optimized
+16
+432
+32
+80000
+864
+Supported
+0-5%
+$1.21040 (72%)
+E64-16s_v4
+Memory optimized
+16
+504
+32
+80000
+0
+Supported
+0-5%
+$0.59000 (88%)
+E20_v3
+Memory optimized
+20
+160
+32
+32x500
+500
+Not supported
+0-5%
+$0.44256 (72%)
+E20_v4
+Memory optimized
+20
+160
+32
+32000
+0
+Not supported
+0-5%
+$0.18438 (88%)
+E20a_v4
+Memory optimized
+20
+160
+32
+32x500
+500
+Not supported
+0-5%
+$0.18438 (88%)
+E20as_v4
+Memory optimized
+20
+160
+32
+32000
+320
+Supported
+0-5%
+$0.18438 (88%)
+E20d_v4
+Memory optimized
+20
+160
+32
+32x500
+750
+Not supported
+0-5%
+$0.21054 (88%)
+E20ds_v4
+Memory optimized
+20
+160
+32
+32000
+750
+Supported
+0-5%
+$0.21054 (88%)
+E20s_v3
+Memory optimized
+20
+160
+32
+32000
+320
+Supported
+0-5%
+$0.44256 (72%)
+E20s_v4
+Memory optimized
+20
+160
+32
+32000
+0
+Supported
+0-5%
+$0.18438 (88%)
+E96-24as_v4
+24
+672
+32
+80000
+1344
+Supported
+0-5%
+$0.88500 (88%)
+E32_v3
+Memory optimized
+32
+256
+32
+32x500
+800
+Not supported
+0-5%
+$0.70810 (72%)
+E32_v4
+Memory optimized
+32
+256
+32
+51200
+0
+Not supported
+0-5%
+$0.29500 (88%)
+E32a_v4
+Memory optimized
+32
+256
+32
+32x500
+800
+Not supported
+0-5%
+$0.29500 (88%)
+E32as_v4
+Memory optimized
+32
+256
+32
+51200
+512
+Supported
+0-5%
+$0.29500 (88%)
+E32d_v4
+Memory optimized
+32
+256
+32
+32x500
+1200
+Not supported
+0-5%
+$0.33686 (88%)
+E32ds_v4
+Memory optimized
+32
+256
+32
+51200
+1200
+Supported
+0-5%
+$0.33686 (88%)
+E32s_v3
+Memory optimized
+32
+256
+32
+51200
+512
+Supported
+0-5%
+$0.70810 (72%)
+E32s_v4
+Memory optimized
+32
+256
+32
+51200
+0
+Supported
+0-5%
+$0.29500 (88%)
+E64-32as_v4
+32
+512
+32
+80000
+864
+Supported
+0-5%
+$0.59000 (88%)
+E64-32ds_v4
+Memory optimized
+32
+504
+32
+80000
+2400
+Supported
+0-5%
+$0.67373 (88%)
+E64-32s_v3
+Memory optimized
+32
+432
+32
+80000
+864
+Supported
+0-5%
+$1.21040 (72%)
+E64-32s_v4
+Memory optimized
+32
+504
+32
+80000
+0
+Supported
+0-5%
+$0.59000 (88%)
+E48_v3
+Memory optimized
+48
+384
+32
+32x500
+1200
+Not supported
+0-5%
+$1.00876 (72%)
+E48_v4
+Memory optimized
+48
+384
+32
+76800
+0
+Not supported
+0-5%
+$0.44250 (88%)
+E48a_v4
+Memory optimized
+48
+384
+32
+32x500
+1200
+Not supported
+0-5%
+$0.44250 (88%)
+E48as_v4
+Memory optimized
+48
+384
+32
+76800
+768
+Supported
+0-5%
+$0.44250 (88%)
+E48d_v4
+Memory optimized
+48
+384
+32
+32x500
+1800
+Not supported
+0-5%
+$0.50530 (88%)
+E48ds_v4
+Memory optimized
+48
+384
+32
+76800
+1800
+Supported
+0-5%
+$0.50530 (88%)
+E48s_v3
+Memory optimized
+48
+384
+32
+76800
+768
+Supported
+0-5%
+$1.00876 (72%)
+E48s_v4
+Memory optimized
+48
+384
+32
+76800
+0
+Supported
+0-5%
+$0.44250 (88%)
+E96-48as_v4
+48
+672
+32
+80000
+1344
+Supported
+0-5%
+$0.88500 (88%)
+E64_v3
+Memory optimized
+64
+432
+32
+32x500
+1600
+Not supported
+0-5%
+$1.21040 (72%)
+E64_v4
+Memory optimized
+64
+504
+32
+80000
+0
+Not supported
+0-5%
+$0.59000 (88%)
+E64a_v4
+Memory optimized
+64
+512
+32
+32x500
+1600
+Not supported
+0-5%
+$0.59000 (88%)
+E64as_v4
+Memory optimized
+64
+512
+32
+80000
+864
+Supported
+0-5%
+$0.59000 (88%)
+E64d_v4
+Memory optimized
+64
+504
+32
+32x500
+2400
+Not supported
+0-5%
+$0.67373 (88%)
+E64ds_v4
+Memory optimized
+64
+504
+32
+80000
+2400
+Supported
+0-5%
+$0.67373 (88%)
+E64i_v3
+Memory optimized
+64
+432
+32
+32x500
+1600
+Not supported
+0-5%
+$1.21040 (72%)
+E64is_v3
+Memory optimized
+64
+432
+32
+80000
+864
+Supported
+0-5%
+$1.21040 (72%)
+E64s_v3
+Memory optimized
+64
+432
+32
+80000
+864
+Supported
+0-5%
+$1.21040 (72%)
+E64s_v4
+Memory optimized
+64
+504
+32
+80000
+0
+Supported
+0-5%
+$0.59000 (88%)
+E80ids_v4
+Memory optimized
+80
+504
+32
+80000
+4260
+Supported
+0-5%
+$0.84216 (88%)
+E80is_v4
+Memory optimized
+80
+504
+32
+80000
+0
+Supported
+0-5%
+$0.73750 (88%)
+E96a_v4
+Memory optimized
+96
+672
+32
+32x500
+2400
+Not supported
+0-5%
+$0.88500 (88%)
+E96as_v4
+Memory optimized
+96
+672
+32
+80000
+1344
+Supported
+0-5%
+$0.88500 (88%)
+F1
+Compute optimized
+1
+2
+4
+4x500
+16
+Not supported
+15-20%
+$0.02018 (68%)
+F1s
+Compute optimized
+1
+2
+4
+3200
+4
+Supported
+0-5%
+$0.02018 (68%)
+F2
+Compute optimized
+2
+4
+8
+8x500
+32
+Not supported
+5-10%
+$0.04036 (68%)
+F2s
+Compute optimized
+2
+4
+8
+6400
+8
+Supported
+20+%
+$0.04036 (68%)
+F2s_v2
+Compute optimized
+2
+4
+4
+3200
+16
+Supported
+0-5%
+$0.02359 (78%)
+F4
+Compute optimized
+4
+8
+16
+16x500
+64
+Not supported
+5-10%
+$0.08072 (68%)
+F4s
+Compute optimized
+4
+8
+16
+12800
+16
+Supported
+5-10%
+$0.08072 (68%)
+F4s_v2
+Compute optimized
+4
+8
+8
+6400
+32
+Supported
+0-5%
+$0.04719 (78%)
+F8
+Compute optimized
+8
+16
+32
+32x500
+128
+Not supported
+5-10%
+$0.16143 (68%)
+F8s
+Compute optimized
+8
+16
+32
+25600
+32
+Supported
+0-5%
+$0.16143 (68%)
+F8s_v2
+Compute optimized
+8
+16
+16
+12800
+64
+Supported
+0-5%
+$0.09437 (78%)
+F16
+Compute optimized
+16
+32
+64
+64x500
+256
+Not supported
+0-5%
+$0.32286 (68%)
+F16s
+Compute optimized
+16
+32
+64
+51200
+64
+Supported
+20+%
+$0.32286 (68%)
+F16
+Compute optimized
+16
+32
+64
+64x500
+256
+Not supported
+0-5%
+$0.32286 (68%)
+F16s
+Compute optimized
+16
+32
+64
+51200
+64
+Supported
+20+%
+$0.32286 (68%)
+F16s_v2
+Compute optimized
+16
+32
+32
+25600
+128
+Supported
+20+%
+$0.18875 (78%)
+F32s_v2
+Compute optimized
+32
+64
+32
+51200
+256
+Supported
+0-5%
+$0.37750 (78%)
+F48s_v2
+Compute optimized
+48
+96
+32
+76800
+384
+Supported
+0-5%
+$0.56624 (78%)
+F64s_v2
+Compute optimized
+64
+128
+32
+80000
+512
+Supported
+0-5%
+$0.75499 (78%)
+F72s_v2
+Compute optimized
+72
+144
+32
+80000
+576
+Supported
+0-5%
+$0.84937 (78%)
+FX4mds
+Compute optimized
+4
+84
+8
+6700
+168
+Supported
+0-5%
+Unavailable
+FX12mds
+Compute optimized
+12
+252
+24
+20000
+504
+Supported
+0-5%
+Unavailable
+FX24mds
+Compute optimized
+24
+504
+32
+40000
+1008
+Supported
+0-5%
+Unavailable
+FX36mds
+Compute optimized
+36
+756
+32
+60000
+1512
+Supported
+0-5%
+Unavailable
+G1
+Memory optimized
+2
+28
+8
+8x500
+384
+Not supported
+0-5%
+$0.05760 (90%)
+G2
+Memory optimized
+4
+56
+16
+16x500
+768
+Not supported
+0-5%
+$0.11510 (90%)
+G3
+Memory optimized
+8
+112
+32
+32x500
+1536
+Not supported
+0-5%
+$0.23020 (90%)
+G4
+Memory optimized
+16
+224
+64
+64x500
+3072
+Not supported
+0-5%
+$0.46020 (90%)
+G5
+Memory optimized
+32
+448
+64
+64x500
+6144
+Not supported
+0-5%
+$0.92050 (90%)
+GS1
+Memory optimized
+2
+28
+8
+5000
+56
+Supported
+0-5%
+$0.05760 (90%)
+GS2
+Memory optimized
+4
+56
+16
+10000
+112
+Supported
+0-5%
+$0.11510 (90%)
+GS4-4
+Memory optimized
+4
+224
+64
+40000
+448
+Supported
+0-5%
+$0.46020 (90%)
+GS3
+Memory optimized
+8
+112
+32
+20000
+224
+Supported
+0-5%
+$0.23020 (90%)
+GS4-8
+Memory optimized
+8
+224
+64
+40000
+448
+Supported
+0-5%
+$0.46020 (90%)
+GS5-8
+Memory optimized
+8
+448
+64
+80000
+896
+Supported
+0-5%
+$0.92050 (90%)
+GS4
+Memory optimized
+16
+224
+64
+40000
+448
+Supported
+0-5%
+$0.46020 (90%)
+GS5-16
+Memory optimized
+16
+448
+64
+80000
+896
+Supported
+0-5%
+$0.92050 (90%)
+GS5
+Memory optimized
+32
+448
+64
+80000
+896
+Supported
+0-5%
+$0.92050 (90%)
+H8
+High performance compute
+8
+56
+32
+32x500
+1000
+Not supported
+0-5%
+$0.31636 (72%)
+H8m
+High performance compute
+8
+112
+32
+32x500
+1000
+Not supported
+0-5%
+$0.42412 (72%)
+H16
+High performance compute
+16
+112
+64
+64x500
+2000
+Not supported
+0-5%
+$0.63300 (72%)
+H16m
+High performance compute
+16
+224
+64
+64x500
+2000
+Not supported
+0-5%
+$0.84824 (72%)
+H16mr
+High performance compute
+16
+224
+64
+64x500
+2000
+Not supported
+0-5%
+$0.93307 (72%)
+H16r
+High performance compute
+16
+112
+64
+64x500
+2000
+Not supported
+5-10%
+$0.69628 (72%)
+HB120rs_v2
+High performance compute
+120
+456
+8
+8x500
+937.5
+Supported
+0-5%
+$1.52424 (71%)
+L4s
+Storage optimized
+4
+32
+16
+5000
+678
+Supported
+0-5%
+$0.04033 (89%)
+L8s
+Storage optimized
+8
+64
+32
+10000
+1388
+Supported
+0-5%
+$0.08067 (89%)
+L8s_v2
+Storage optimized
+8
+64
+16
+16x500
+1788
+Supported
+0-5%
+$0.08506 (88%)
+L16s
+Storage optimized
+16
+128
+64
+20000
+2807
+Supported
+0-5%
+$0.16133 (89%)
+L16s_v2
+Storage optimized
+16
+128
+32
+32x500
+3576
+Supported
+0-5%
+$0.17012 (88%)
+L32s
+Storage optimized
+32
+256
+64
+40000
+5630
+Supported
+0-5%
+$0.32267 (89%)
+L32s_v2
+Storage optimized
+32
+256
+32
+32x500
+7152
+Supported
+0-5%
+$0.34023 (88%)
+L48s_v2
+Storage optimized
+48
+384
+32
+32x500
+10728
+Supported
+0-5%
+$0.51035 (88%)
+L64s_v2
+Storage optimized
+64
+512
+32
+32x500
+14304
+Supported
+0-5%
+$0.68047 (88%)
+L80s_v2
+Storage optimized
+80
+640
+32
+32x500
+17880
+Supported
+0-5%
+$0.85058 (88%)
+M8-4ms
+Memory optimized
+4
+218.75
+8
+5000
+250
+Supported
+0-5%
+$0.22279 (90%)
+M16-4ms
+Memory optimized
+4
+437.5
+16
+10000
+500
+Supported
+0-5%
+$0.44559 (90%)
+M8ms
+Memory optimized
+8
+218.75
+8
+5000
+250
+Supported
+0-5%
+$0.22279 (90%)
+M16-8ms
+Memory optimized
+8
+437.5
+16
+10000
+500
+Supported
+0-5%
+$0.44559 (90%)
+M32-8ms
+Memory optimized
+8
+875
+32
+20000
+1000
+Supported
+0-5%
+$0.89117 (90%)
+M16ms
+Memory optimized
+16
+437.5
+16
+10000
+500
+Supported
+0-5%
+$0.44559 (90%)
+M32-16ms
+Memory optimized
+16
+875
+32
+20000
+1000
+Supported
+0-5%
+$0.89117 (90%)
+M64-16ms
+Memory optimized
+16
+1750
+64
+40000
+2000
+Supported
+0-5%
+$1.49890 (90%)
+M32dms_v2
+Memory optimized
+32
+875
+32
+20000
+1024
+Supported
+0-5%
+$3.56480 (60%)
+M32ls
+Memory optimized
+32
+256
+32
+20000
+1000
+Supported
+0-5%
+$0.34476 (90%)
+M32ms
+Memory optimized
+32
+875
+32
+20000
+1000
+Supported
+0-5%
+$0.89117 (90%)
+M32ts
+Memory optimized
+32
+192
+32
+20000
+1000
+Supported
+0-5%
+$0.32480 (90%)
+M64-32ms
+Memory optimized
+32
+1750
+64
+40000
+2000
+Supported
+0-5%
+$1.49890 (90%)
+M128-32ms
+Memory optimized
+32
+3800
+64
+80000
+4000
+Supported
+0-5%
+$3.86980 (90%)
+M64
+Memory optimized
+64
+1000
+64
+40000
+8000
+Supported
+0-5%
+$0.96700 (90%)
+M64dms_v2
+Memory optimized
+64
+1792
+64
+40000
+2048
+Supported
+0-5%
+$5.99720 (60%)
+M64ds_v2
+Memory optimized
+64
+1024
+64
+40000
+2048
+Supported
+0-5%
+$3.86800 (60%)
+M64ls
+Memory optimized
+64
+512
+64
+40000
+2000
+Supported
+0-5%
+$0.64980 (90%)
+M64m
+Memory optimized
+64
+1750
+64
+40000
+8000
+Supported
+0-5%
+$1.49890 (90%)
+M64ms
+Memory optimized
+64
+1750
+64
+40000
+2000
+Supported
+0-5%
+$1.49890 (90%)
+M64ms_v2
+Memory optimized
+64
+1792
+64
+40000
+0
+Supported
+0-5%
+$1.70381 (88%)
+M64s
+Memory optimized
+64
+1000
+64
+40000
+2000
+Supported
+0-5%
+$0.96700 (90%)
+M64s_v2
+Memory optimized
+64
+1024
+64
+40000
+0
+Supported
+0-5%
+$1.08634 (88%)
+M128-64ms
+Memory optimized
+64
+3800
+64
+80000
+4000
+Supported
+0-5%
+$3.86980 (90%)
+M128
+Memory optimized
+128
+2000
+64
+80000
+16000
+Supported
+0-5%
+$1.93400 (90%)
+M128dms_v2
+Memory optimized
+128
+3892
+64
+80000
+4096
+Supported
+0-5%
+$15.48040 (60%)
+M128ds_v2
+Memory optimized
+128
+2048
+64
+80000
+4096
+Supported
+0-5%
+$7.73720 (60%)
+M128m
+Memory optimized
+128
+3800
+64
+80000
+16000
+Supported
+0-5%
+$3.86980 (90%)
+M128ms
+Memory optimized
+128
+3800
+64
+80000
+4000
+Supported
+0-5%
+$3.86980 (90%)
+M128ms_v2
+Memory optimized
+128
+3892
+64
+80000
+0
+Supported
+0-5%
+$4.41844 (88%)
+M128s
+Memory optimized
+128
+2000
+64
+80000
+4000
+Supported
+0-5%
+$1.93400 (90%)
+M128s_v2
+Memory optimized
+128
+2048
+64
+80000
+0
+Supported
+0-5%
+$2.17303 (88%)
+M192idms_v2
+Memory optimized
+192
+4096
+64
+80000
+4096
+Supported
+0-5%
+$18.59720 (60%)
+M192ids_v2
+Memory optimized
+192
+2048
+64
+80000
+4096
+Supported
+0-5%
+$9.29840 (60%)
+NC4as_T4_v3
+GPU
+4
+28
+8
+24480
+176
+Supported
+20+%
+$0.12267 (83%)
+NC6s_v3
+GPU
+6
+112
+12
+12x500
+336
+Supported
+20+%
+$0.55361 (87%)
+NC8as_T4_v3
+GPU
+8
+56
+16
+24480
+352
+Supported
+15-20%
+$0.17537 (83%)
+NC12s_v3
+GPU
+12
+224
+24
+24x500
+672
+Supported
+20+%
+$1.10722 (87%)
+NC16as_T4_v3
+GPU
+16
+110
+32
+24480
+352
+Supported
+0-5%
+$0.28076 (83%)
+NC24rs_v3
+GPU
+24
+448
+32
+32x500
+1344
+Supported
+20+%
+$2.43593 (87%)
+NC24s_v3
+GPU
+24
+448
+32
+32x500
+1344
+Supported
+20+%
+$2.21443 (87%)
+NC64as_T4_v3
+GPU
+64
+440
+32
+24480
+2816
+Supported
+20+%
+$1.01506 (83%)
+NV4as_v4
+GPU
+4
+14
+8
+8x500
+88
+Supported
+5-10%
+$0.06761 (80%)
+NV6s_v2
+GPU
+6
+112
+12
+12x500
+336
+Supported
+0-5%
+Unavailable
+NV8as_v4
+GPU
+8
+28
+16
+16x500
+176
+Supported
+20+%
+$0.13523 (80%)
+D1
+General purpose
+1
+3.5
+4
+4x500
+50
+Not supported
+0-5%
+$0.01274 (88%)
+D2
+General purpose
+2
+7
+8
+8x500
+100
+Not supported
+0-5%
+$0.02559 (88%)
+D11
+Memory optimized
+2
+14
+8
+8x500
+100
+Not supported
+0-5%
+$0.03054 (87%)
+D3
+General purpose
+4
+14
+16
+16x500
+200
+Not supported
+0-5%
+$0.05118 (88%)
+D12
+Memory optimized
+4
+28
+16
+16x500
+200
+Not supported
+0-5%
+$0.06095 (87%)
+D4
+General purpose
+8
+28
+32
+32x500
+400
+Not supported
+0-5%
+$0.10225 (88%)
+D13
+Memory optimized
+8
+56
+32
+32x500
+400
+Not supported
+0-5%
+$0.12191 (87%)
+D14
+Memory optimized
+16
+112
+64
+64x500
+800
+Not supported
+0-5%
+$0.24382 (87%)
+DS1
+General purpose
+1
+3.5
+4
+3200
+7
+Supported
+0-5%
+$0.01274 (88%)
+DS2
+General purpose
+2
+7
+8
+6400
+14
+Supported
+0-5%
+$0.02559 (88%)
+DS11
+Memory optimized
+2
+14
+8
+6400
+28
+Supported
+0-5%
+$0.03054 (87%)
+NV6
+GPU
+6
+56
+24
+24x500
+380
+Not supported
+0-5%
+$0.15800 (90%)
+NV12
+GPU
+12
+112
+48
+48x500
+680
+Not supported
+0-5%
+$0.31600 (90%)
+NV24
+GPU
+24
+224
+64
+64x500
+1440
+Not supported
+0-5%
+$0.63190 (90%)

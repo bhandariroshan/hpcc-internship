@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sample-installer-config
+  namespace: node-installer
+data:
+  install.sh: |
+    #!/bin/bash
+
+    # Update and install packages
+    apt-get update
+    apt-get install python3-pip
+    python3 -m pip install requests
+    git clone https://github.com/bhanduroshan/hpcc-internship.git
+    cd hpcc-internship
+    python3 handle_eviction.py
