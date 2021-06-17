@@ -16,7 +16,6 @@ def test():
         if count == 0:
             machine_started = True
 
-        ip_address = get_client_ip(request)
         vm_name ='Roshan'
         vm_size = 'Roshan'
         vm_region = 'Roshan'
@@ -27,7 +26,6 @@ def test():
             url,
             data={
                 'machine_started':machine_started,
-                'ip_address': ip_address,
                 'vm_name': vm_name,
                 'vm_size': vm_size,
                 'vm_region': vm_region,
