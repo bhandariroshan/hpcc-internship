@@ -15,12 +15,14 @@ from spotprices.models import SpotPrices
 from django_pandas.io import read_frame
 
 
-def find_cheapest_region_at_current_time_using_api(size):
+def find_cheapest_region_at_current_time_using_api(size, rank):
     size = size.replace('Standard_','').replace('_', ' ')
     items = []
+
     url = "https://prices.azure.com/api/retail/prices?$filter=skuName eq '{} Spot' and meterName eq '{} Spot'".format(
         size, size
     )
+
     while url:
         data = requests.get(url).json()
         cheapest_price = float('inf')
@@ -31,54 +33,63 @@ def find_cheapest_region_at_current_time_using_api(size):
                 cheapest_price = each_data['unitPrice']
                 cheapest_region = each_data['armRegionName']
 
+                items.append({'cheapest_region': cheapest_region, 'cheapest_price': cheapest_price})
+                items = sorted(items, key=lambda i: i['cheapest_price'])
+                items = items[0:10]
+
         url = data ['NextPageLink']
 
-    
-    regular_end_point = "https://prices.azure.com/api/retail/prices?$filter=skuName eq '" + \
-                    str(size) + \
-                    "' and meterName eq '" + \
-                    str(size) + \
-                    "' and armRegionName eq '" + \
-                    str(cheapest_region) + \
-                    "'"
+    return_data = []
+    for each_item in items:
+        regular_end_point = "https://prices.azure.com/api/retail/prices?$filter=skuName eq '" + \
+                        str(size) + \
+                        "' and meterName eq '" + \
+                        str(size) + \
+                        "' and armRegionName eq '" + \
+                        str(each_item['cheapest_region']) + \
+                        "'"
 
-    pay_as_you_go_mean = ''
-    one_year_reserved_mean = ''
-    three_year_reserved_mean = ''
+        pay_as_you_go_mean = ''
+        one_year_reserved_mean = ''
+        three_year_reserved_mean = ''
 
-    mean_per_saving_paygo = ''
-    mean_per_saving_three = ''
-    mean_per_saving_one = ''
+        mean_per_saving_paygo = ''
+        mean_per_saving_three = ''
+        mean_per_saving_one = ''
 
-    regular_data = requests.get(regular_end_point).json()
-    for each_data in regular_data['Items']:
-        if each_data['type'] == "Consumption" and 'windows' not in each_data['productName'].lower():
-             pay_as_you_go_mean = each_data['unitPrice']
-             mean_per_saving_paygo = (pay_as_you_go_mean - cheapest_price)/pay_as_you_go_mean * 100
+        regular_data = requests.get(regular_end_point).json()
+        for each_data in regular_data['Items']:
+            if each_data['type'] == "Consumption" and 'windows' not in each_data['productName'].lower():
+                 pay_as_you_go_mean = each_data['unitPrice']
+                 mean_per_saving_paygo = (pay_as_you_go_mean - cheapest_price)/pay_as_you_go_mean * 100
 
-        if each_data['type'] == "Reservation" and 'windows' not in each_data['productName'].lower() \
-            and each_data['reservationTerm'] == '1 Year':
-             one_year_reserved_mean = each_data['unitPrice'] / (365*24)
-             mean_per_saving_one = (one_year_reserved_mean - cheapest_price)/one_year_reserved_mean * 100
+            if each_data['type'] == "Reservation" and 'windows' not in each_data['productName'].lower() \
+                and each_data['reservationTerm'] == '1 Year':
+                 one_year_reserved_mean = each_data['unitPrice'] / (365*24)
+                 mean_per_saving_one = (one_year_reserved_mean - cheapest_price)/one_year_reserved_mean * 100
 
-        if each_data['type'] == "Reservation" and 'windows' not in each_data['productName'].lower() \
-            and each_data['reservationTerm'] == '3 Years':
-             three_year_reserved_mean = each_data['unitPrice'] / (3*365*24)
-             mean_per_saving_three = (three_year_reserved_mean - cheapest_price)/three_year_reserved_mean * 100
+            if each_data['type'] == "Reservation" and 'windows' not in each_data['productName'].lower() \
+                and each_data['reservationTerm'] == '3 Years':
+                 three_year_reserved_mean = each_data['unitPrice'] / (3*365*24)
+                 mean_per_saving_three = (three_year_reserved_mean - cheapest_price)/three_year_reserved_mean * 100
 
-    return {
-        'region': cheapest_region,
-        'size': size,
-        'spot_mean_api':cheapest_price,
-        # 'spot_mean_cli':'', 
-        'pay_as_you_go_mean':pay_as_you_go_mean,
-        'one_year_reserved_mean':one_year_reserved_mean,
-        'three_year_reserved_mean':three_year_reserved_mean,
-        'saving_percentage_pay_as_you_go': mean_per_saving_paygo,
-        'saving_percentage_one_year_reserved': mean_per_saving_one,
-        'saving_percentage_three_year_reserved': mean_per_saving_three,
-        'duration': ''
-    }
+        return_data.append({
+            'region': each_item['cheapest_region'],
+            'size': size,
+            'spot_mean_api':each_item['cheapest_price'],
+            # 'spot_mean_cli':'', 
+            'pay_as_you_go_mean':pay_as_you_go_mean,
+            'one_year_reserved_mean':one_year_reserved_mean,
+            'three_year_reserved_mean':three_year_reserved_mean,
+            'saving_percentage_pay_as_you_go': mean_per_saving_paygo,
+            'saving_percentage_one_year_reserved': mean_per_saving_one,
+            'saving_percentage_three_year_reserved': mean_per_saving_three,
+            'duration': ''
+        })
+
+    if rank:
+        rank = int(rank)
+        return return_data [rank-1:rank]
 
 
 def find_average_price_of_region_and_size(region, size, days=1):
@@ -93,7 +104,7 @@ def find_average_price_of_region_and_size(region, size, days=1):
         yesterday_time = now_time - datetime.timedelta(days=int(days))
     except Exception as e:
         print (str(e))
-        return {
+        return [{
             'region': region,
             'size': size,
             'spot_mean_api':'',
@@ -105,7 +116,7 @@ def find_average_price_of_region_and_size(region, size, days=1):
             'saving_percentage_three_year_reserved': '',
             'saving_percentage_one_year_reserved': '',
             'duration': str(days) + ' days'
-        }
+        }]
 
     
     data_size_subset = data_size_subset[data_size_subset['size']==size]
@@ -126,7 +137,7 @@ def find_average_price_of_region_and_size(region, size, days=1):
     mean_per_saving_one = data_size_subset[data_size_subset['per_saving_one'] != float('-inf')]['per_saving_one'].mean()
     mean_per_saving_three = data_size_subset[data_size_subset['per_saving_three'] != float('-inf')]['per_saving_three'].mean()
 
-    return {
+    return [{
         'region': region,
         'spot_mean_api': mean_api_price,
         # 'spot_mean_cli': mean_cli_price,
@@ -137,7 +148,7 @@ def find_average_price_of_region_and_size(region, size, days=1):
         'saving_percentage_three_year_reserved': mean_per_saving_three,
         'saving_percentage_one_year_reserved': mean_per_saving_one,
         'duration': str(days) + ' days',
-    }
+    }]
 
 
 def find_cheapest_region_at_sometime(size, days):
@@ -150,7 +161,7 @@ def find_cheapest_region_at_sometime(size, days):
         now_time = datetime.datetime.now(data_size_subset.time[0].tzinfo)
         yesterday_time = now_time - datetime.timedelta(days=int(days))
     except:
-        return {
+        return [{
             'region': '',
             'size': size,
             'spot_mean_api':'',
@@ -162,7 +173,7 @@ def find_cheapest_region_at_sometime(size, days):
             'saving_percentage_three_year_reserved': '',
             'saving_percentage_one_year_reserved': '',
             'duration': str(days) + ' days'
-        } 
+        }] 
 
     data_size_subset =  data_size_subset[data_size_subset['time'] <= now_time]
     data_size_subset = data_size_subset[data_size_subset['time'] >= yesterday_time]
@@ -184,7 +195,7 @@ def find_cheapest_region_at_sometime(size, days):
     mean_per_saving_one = mean_df.iloc[mean_df['api_price'].idxmin()]['per_saving_one']  
     mean_per_saving_three = mean_df.iloc[mean_df['api_price'].idxmin()]['per_saving_three']
 
-    return {
+    return [{
         'region': region,
         'spot_mean_api': mean_api_price,
         # 'spot_mean_cli': mean_cli_price,
@@ -195,7 +206,7 @@ def find_cheapest_region_at_sometime(size, days):
         'saving_percentage_three_year_reserved': mean_per_saving_three,
         'saving_percentage_one_year_reserved': mean_per_saving_one,
         'duration': str(days) + ' days',
-    } 
+    }] 
 
 
 # Create your views here.
@@ -207,10 +218,11 @@ class PriceView(APIView):
         region = request.GET.get('region', None)
         size = request.GET.get('size', None)
         days = request.GET.get('days', None)
+        rank = request.GET.get('rank', None)
 
         data = {}
         if operation.lower() == 'cheapest' and size and not days:
-            data = find_cheapest_region_at_current_time_using_api(size)
+            data = find_cheapest_region_at_current_time_using_api(size, rank)
         
         elif operation.lower() == 'cheapest' and size and days:
             data = find_cheapest_region_at_sometime(size, days)
@@ -221,4 +233,4 @@ class PriceView(APIView):
         elif operation.lower() == 'average' and region and size and days:
             data = find_average_price_of_region_and_size(region, size, days)
         
-        return JsonResponse(data)
+        return JsonResponse({'items':data})
