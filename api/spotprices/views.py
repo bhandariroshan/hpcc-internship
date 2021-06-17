@@ -211,6 +211,15 @@ def find_cheapest_region_at_sometime(size, days):
     }] 
 
 
+def get_client_ip(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    return ip
+
+
 # Create your views here.
 class PriceView(APIView):
     permission_classes = [] # + [IsAuthenticated]
@@ -236,3 +245,22 @@ class PriceView(APIView):
             data = find_average_price_of_region_and_size(region, size, days)
         
         return JsonResponse({'items':data})
+
+# Create your views here.
+class EvictionView(APIView): 
+    def post(self, request):
+        machine_started = request.POST.get('started', False)
+        if machine_started:
+            start_time = str(datetime.datetime.now())
+
+        ip_address = get_client_ip(request)
+        vm_name = request.POST.get('vm_name', None)
+        vm_size = request.POST.get('vm_size', None)
+        vm_region = request.POST.get('vm_region', None)
+        cluster_name = request.POST.get('cluster_name', None)
+        cluster_region = request.POST.get('cluster_region', None)
+
+        machine_evicted = request.POST.get('evicted', False)
+        if machine_evicted:
+            eviction_time = str(datetime.datetime.now())
+            eviction_notice = request.POST.get('eviction_notice', {})

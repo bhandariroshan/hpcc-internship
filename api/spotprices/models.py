@@ -31,3 +31,16 @@ class SpotPrices(models.Model):
     def __str__(self):
         return self.region + ' - ' + self.size
  
+
+class EvictionNotices(models.Model): 
+    start_time =models.CharField(max_length=200)
+
+    ip_address = models.CharField(max_length=200)
+    vm_name = models.CharField(max_length=200)
+    vm_region = models.CharField(max_length=200)
+    cluster_name = models.CharField(max_length=200)
+    cluster_region = models.CharField(max_length=200)
+
+    eviction_time = models.CharField(max_length=200)
+    eviction_notice = JSONField(default=dict, blank=True)
+ 
