@@ -253,15 +253,13 @@ class EvictionView(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request):
-        evc = EvictionNotices()
+        ip_address = get_client_ip(request)
+        evc = EvictionNotices.objects.get_or_create(ip_address=ip_address)
 
         machine_started = request.POST.get('started', False)
         if machine_started:
             start_time = str(datetime.datetime.now())
             evc.start_time = start_time
-
-        ip_address = get_client_ip(request)
-        evc.ip_address = ip_address
 
         vm_name = request.POST.get('vm_name', None)
         evc.vm_name = vm_name
