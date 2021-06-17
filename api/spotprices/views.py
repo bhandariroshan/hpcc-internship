@@ -11,7 +11,7 @@ from rest_framework.views import APIView
 from django.http import JsonResponse
 
 import pandas as pd
-from spotprices.models import SpotPrices
+from spotprices.models import SpotPrices, EvictionNotices
 from django_pandas.io import read_frame
 
 
@@ -249,18 +249,39 @@ class PriceView(APIView):
 # Create your views here.
 class EvictionView(APIView): 
     def post(self, request):
+        evc = EvictionNotices()
+
         machine_started = request.POST.get('started', False)
         if machine_started:
             start_time = str(datetime.datetime.now())
+            evc.start_time = start_time
 
         ip_address = get_client_ip(request)
+        evc.ip_address = ip_address
+
         vm_name = request.POST.get('vm_name', None)
+        evc.vm_name = vm_name
+
         vm_size = request.POST.get('vm_size', None)
+        evc.vm_size = vm_size
+
         vm_region = request.POST.get('vm_region', None)
+        evc.vm_region = vm_region
+
         cluster_name = request.POST.get('cluster_name', None)
+        evc.cluster_name = cluster_name
+
         cluster_region = request.POST.get('cluster_region', None)
+        evc.cluster_region = cluster_region
 
         machine_evicted = request.POST.get('evicted', False)
         if machine_evicted:
             eviction_time = str(datetime.datetime.now())
             eviction_notice = request.POST.get('eviction_notice', {})
+
+            evc.eviction_time = eviction_time
+            evc.eviction_notice = eviction_notice
+
+        evc.save()
+        print('Success')
+        return JsonResponse({'message':'success'})
