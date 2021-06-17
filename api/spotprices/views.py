@@ -14,6 +14,7 @@ import pandas as pd
 from spotprices.models import SpotPrices, EvictionNotices
 from django_pandas.io import read_frame
 from django.views.decorators.csrf import csrf_exempt
+from rest_framework.permissions import IsAuthenticated
 
 
 def find_cheapest_region_at_current_time_using_api(size, rank):
