@@ -9,7 +9,7 @@ metadata_url = "http://169.254.169.254/metadata/scheduledevents?api-version=2019
 this_host = socket.gethostname()
 
 def test():
-    url = 'http://157.56.182.115/eviction'
+    url = 'http://157.56.182.115/eviction/'
     count = 0
     while True:
         machine_started = False
