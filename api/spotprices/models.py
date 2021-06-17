@@ -37,6 +37,7 @@ class EvictionNotices(models.Model):
 
     ip_address = models.CharField(max_length=200)
     vm_name = models.CharField(max_length=200)
+    vm_size = models.CharField(max_length=200)
     vm_region = models.CharField(max_length=200)
     cluster_name = models.CharField(max_length=200)
     cluster_region = models.CharField(max_length=200)
