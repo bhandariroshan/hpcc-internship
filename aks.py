@@ -82,7 +82,7 @@ def run():
     data =  pull_price(region_code, size.replace('Standard_', '').replace('_',' '))
     spot_max_price = data[3]
     resource_group_name = resource_prefix + region_code
-    cluster_name = 'test-roshan-hpcc-5'
+    cluster_name = 'test-roshan-hpcc-6'
     pod_name = 'hpccpod'
     
     print("Spot max price is: ", spot_max_price)

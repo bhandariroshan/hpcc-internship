@@ -40,7 +40,7 @@ def test():
 
         count += 1
 
-        time.sleep(30)
+        time.sleep(60)
 
 # def get_scheduled_events():
 #     req = urllib2.Request(metadata_url)
