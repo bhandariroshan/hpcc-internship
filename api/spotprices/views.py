@@ -13,6 +13,7 @@ from django.http import JsonResponse
 import pandas as pd
 from spotprices.models import SpotPrices, EvictionNotices
 from django_pandas.io import read_frame
+from django.views.decorators.csrf import csrf_exempt
 
 
 def find_cheapest_region_at_current_time_using_api(size, rank):
@@ -247,7 +248,8 @@ class PriceView(APIView):
         return JsonResponse({'items':data})
 
 # Create your views here.
-class EvictionView(APIView): 
+class EvictionView(APIView):
+    @csrf_exempt
     def post(self, request):
         evc = EvictionNotices()
 
