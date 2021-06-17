@@ -11,7 +11,7 @@ this_host = socket.gethostname()
 
 def test():
     user, passwd = 'admin', '@dmin123#'
-    url = 'http://localhost:8000/eviction/'
+    url = 'http://157.56.182.115/eviction/'
     count = 0
     while True:
         machine_started = False
