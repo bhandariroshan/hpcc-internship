@@ -9,6 +9,7 @@ metadata_url = "http://169.254.169.254/metadata/scheduledevents?api-version=2019
 this_host = socket.gethostname()
 
 def test():
+    user, passwd = 'admin', '@dmin123#'
     url = 'http://157.56.182.115/eviction/'
     count = 0
     while True:
@@ -31,7 +32,9 @@ def test():
                 'vm_region': vm_region,
                 'cluster_name': cluster_name,
                 'cluster_region': cluster_region
-            }
+            },
+            auth=(user, passwd),
+            verify=False
         )
 
         count += 1
