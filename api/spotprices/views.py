@@ -90,6 +90,8 @@ def find_cheapest_region_at_current_time_using_api(size, rank):
     if rank:
         rank = int(rank)
         return return_data [rank-1:rank]
+    else:
+        return return_data
 
 
 def find_average_price_of_region_and_size(region, size, days=1):
