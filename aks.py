@@ -78,11 +78,11 @@ def stop_hpcc():
 def run():
     region_code = 'eastus'
     size = 'Standard_D2s_v3'
-    node_pool_count = 2
+    node_pool_count = 3
     data =  pull_price(region_code, size.replace('Standard_', '').replace('_',' '))
     spot_max_price = data[3]
     resource_group_name = resource_prefix + region_code
-    cluster_name = 'test-roshan-hpcc-3'
+    cluster_name = 'test-roshan-hpcc-5'
     pod_name = 'hpccpod'
     
     print("Spot max price is: ", spot_max_price)
