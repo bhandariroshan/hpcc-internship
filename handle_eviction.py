@@ -28,7 +28,7 @@ def test():
                 'machine_started':machine_started,
                 'ip_address': ip_address,
                 'vm_name': vm_name,
-                'vm_size': vm_size
+                'vm_size': vm_size,
                 'vm_region': vm_region,
                 'cluster_name': cluster_name,
                 'cluster_region': cluster_region
