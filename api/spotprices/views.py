@@ -252,7 +252,6 @@ class PriceView(APIView):
 class EvictionView(APIView):
     permission_classes = [IsAuthenticated]
 
-    @csrf_exempt
     def post(self, request):
         evc = EvictionNotices()
 
