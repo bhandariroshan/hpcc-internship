@@ -2,76 +2,62 @@
 
 import json
 import socket
-# import urllib2
 import requests
 import time
+import pytz
+
 
 metadata_url = "http://169.254.169.254/metadata/scheduledevents?api-version=2019-08-01"
 this_host = socket.gethostname()
 
-def test():
+
+def get_scheduled_events(): 
+    headers = {'Metadata': 'true'}
+    resp = requests.get(headers=headers, url=metadata_url)
+    data = resp.json()
+    return data
+
+
+def handle_scheduled_events(data):
     user, passwd = 'admin', '@dmin123#'
-    url = 'http://157.56.182.115/eviction/'
-    count = 0
-    while True:
-        machine_started = False
-        if count == 0:
-            machine_started = True
+    url = 'http://157.56.182.115/eviction/' 
 
-        vm_name ='Roshan'
-        vm_size = 'Roshan'
-        vm_region = 'Roshan'
-        cluster_name = 'Roshan'
-        cluster_region = 'Roshan'
+    for evt in data['Events']:
+        eventid = evt['EventId']
+        status = evt['EventStatus']
+        resources = evt['Resources']
+        eventtype = evt['EventType']
+        resourcetype = evt['ResourceType']
+        notbefore = evt['NotBefore'].replace(" ", "_")
+        description = evt['Description']
+        eventSource = evt['EventSource']
 
-        requests.post(
-            url,
-            data={
-                'machine_started':machine_started,
-                'vm_name': vm_name,
-                'vm_size': vm_size,
-                'vm_region': vm_region,
-                'cluster_name': cluster_name,
-                'cluster_region': cluster_region
-            },
-            auth=(user, passwd),
-            verify=False
-        )
+        notbefore = str(datetime.datetime.strptime(notbefore, '%a, %d %b %Y %H:%M:%S GMT'))
 
-        count += 1
+        for host in resources:
+            print("+ Scheduled Event. This host " + host +\
+                " is scheduled for " + eventtype + " by " + eventSource + \
+                " with description " + description +\
+                " not before " + notbefore)
 
-        time.sleep(60)
+            requests.post(
+                url,
+                data={
+                    'vm_name': host,
+                    'eviction_notice': data,
+                    'eviction_time': notbefore
+                },
+                auth=(user, passwd),
+                verify=False
+            )
 
-# def get_scheduled_events():
-#     req = urllib2.Request(metadata_url)
-#     req.add_header('Metadata', 'true')
-#     resp = urllib2.urlopen(req)
-#     data = json.loads(resp.read())
-#     return data
-
-
-# def handle_scheduled_events(data):
-#     for evt in data['Events']:
-#         eventid = evt['EventId']
-#         status = evt['EventStatus']
-#         resources = evt['Resources']
-#         eventtype = evt['EventType']
-#         resourcetype = evt['ResourceType']
-#         notbefore = evt['NotBefore'].replace(" ", "_")
-#         description = evt['Description']
-#         eventSource = evt['EventSource']
-#         if this_host in resources:
-#             print("+ Scheduled Event. This host " + this_host +\
-#                 " is scheduled for " + eventtype + " by " + eventSource + \
-#                 " with description " + description +\
-#                 " not before " + notbefore)
-
-#             # Add logic for handling events here
 
 def main():
-    # data = get_scheduled_events()
-    # handle_scheduled_events(data)
-    test()
+    while True:
+        data = get_scheduled_events()
+        handle_scheduled_events(data)
+        time.sleep(5)
+
 
 if __name__ == '__main__':
     main()

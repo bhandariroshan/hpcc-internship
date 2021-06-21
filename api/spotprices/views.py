@@ -270,18 +270,15 @@ class EvictionView(APIView):
             cluster_region=cluster_region
         )
 
-        machine_started = request.POST.get('started', False)
-        if machine_started:
-            start_time = str(datetime.datetime.now())
+        start_time = request.POST.get('start_time', None)
+        if start_time:
             evc.start_time = start_time
 
-        machine_evicted = request.POST.get('evicted', False)
-        if machine_evicted:
-            eviction_time = str(datetime.datetime.now())
-            eviction_notice = request.POST.get('eviction_notice', {})
-
+        eviction_time = request.POST.get('eviction_time', None)
+        if eviction_time:
+            evc.eviction_notice = request.POST.get('eviction_notice', {})
             evc.eviction_time = eviction_time
-            evc.eviction_notice = eviction_notice
+
 
         evc.save()
         print('Success')
