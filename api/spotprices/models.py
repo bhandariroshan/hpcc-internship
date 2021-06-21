@@ -33,15 +33,15 @@ class SpotPrices(models.Model):
  
 
 class EvictionNotices(models.Model): 
-    start_time =models.CharField(max_length=200)
+    start_time =models.CharField(max_length=200, blank=True, null=True)
 
-    ip_address = models.CharField(max_length=200)
-    vm_name = models.CharField(max_length=200)
-    vm_size = models.CharField(max_length=200)
-    vm_region = models.CharField(max_length=200)
-    cluster_name = models.CharField(max_length=200)
-    cluster_region = models.CharField(max_length=200)
+    ip_address = models.CharField(max_length=200, blank=True, null=True)
+    vm_name = models.CharField(max_length=200, blank=True, null=True)
+    vm_size = models.CharField(max_length=200, blank=True, null=True)
+    vm_region = models.CharField(max_length=200, blank=True, null=True)
+    cluster_name = models.CharField(max_length=200, blank=True, null=True)
+    cluster_region = models.CharField(max_length=200, blank=True, null=True)
 
-    eviction_time = models.CharField(max_length=200)
-    eviction_notice = JSONField(default=dict, blank=True)
+    eviction_time = models.CharField(max_length=200, blank=True, null=True)
+    eviction_notice = JSONField(default=dict, blank=True, blank=True, null=True)
  
