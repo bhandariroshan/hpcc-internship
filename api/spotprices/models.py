@@ -43,5 +43,5 @@ class EvictionNotices(models.Model):
     cluster_region = models.CharField(max_length=200, blank=True, null=True)
 
     eviction_time = models.CharField(max_length=200, blank=True, null=True)
-    eviction_notice = JSONField(default=dict, blank=True, blank=True, null=True)
+    eviction_notice = JSONField(default=dict, blank=True, null=True)
  
