@@ -12,21 +12,21 @@ this_host = socket.gethostname()
 
 
 def get_scheduled_events(): 
-    return {
-        "DocumentIncarnation":1,
-        "Events":[
-                {
-                    "EventId":"A123BC45-1234-5678-AB90-ABCDEF123456",
-                    "EventStatus":"Scheduled",
-                    "EventType":"Preempt",
-                    "ResourceType":"VirtualMachine",
-                    "Resources":["myspotvm"],
-                    "NotBefore":"Tue, 16 Mar 2021 00:58:46 GMT",
-                    "Description":"",
-                    "EventSource":"Platform"
-                }
-            ]
-    }
+    # return {
+    #     "DocumentIncarnation":1,
+    #     "Events":[
+    #             {
+    #                 "EventId":"A123BC45-1234-5678-AB90-ABCDEF123456",
+    #                 "EventStatus":"Scheduled",
+    #                 "EventType":"Preempt",
+    #                 "ResourceType":"VirtualMachine",
+    #                 "Resources":["myspotvm"],
+    #                 "NotBefore":"Tue, 16 Mar 2021 00:58:46 GMT",
+    #                 "Description":"",
+    #                 "EventSource":"Platform"
+    #             }
+    #         ]
+    # }
     headers = {'Metadata': 'true'}
     resp = requests.get(headers=headers, url=metadata_url)
     data = resp.json()

@@ -280,7 +280,6 @@ class EvictionView(APIView):
             evc.eviction_notice = request.POST.get('eviction_notice', {})
             evc.eviction_time = eviction_time
 
-
         evc[0].save()
         print('Success')
         return JsonResponse({'message':'success'})
