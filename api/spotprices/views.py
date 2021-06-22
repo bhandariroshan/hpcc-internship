@@ -273,12 +273,12 @@ class EvictionView(APIView):
 
         start_time = request.POST.get('start_time', None)
         if start_time:
-            evc.start_time = start_time
+            evc[0].start_time = start_time
 
         eviction_time = request.POST.get('eviction_time', None)
         if eviction_time:
-            evc.eviction_notice = request.POST.get('eviction_notice', {})
-            evc.eviction_time = eviction_time
+            evc[0].eviction_notice = request.POST.get('eviction_notice', {})
+            evc[0].eviction_time = eviction_time
 
         evc[0].save()
         print('Success')
