@@ -252,14 +252,24 @@ class EvictionView(APIView):
         cluster_name = request.POST.get('cluster_name', None)  
         cluster_region = request.POST.get('cluster_region', None) 
 
-        evc = EvictionNotices.objects.create(
-            ip_address=ip_address,
-            vm_name=vm_name,
-            vm_size=vm_size,
-            vm_region=vm_region,
-            cluster_name=cluster_name,
-            cluster_region=cluster_region
+        evc = EvictionNotices.objects.get_or_create(
+            vm_name=vm_name
         )
+
+        if not evc[0].vm_size:
+            evc[0].vm_size = vm_size
+
+        if not evc[0].vm_name:
+            evc[0].vm_name = vm_name
+
+        if not evc[0].vm_region:
+            evc[0].vm_region = vm_region
+
+        if not evc[0].cluster_name:
+            evc[0].cluster_name = cluster_name
+
+        if not evc[0].cluster_region:
+            evc[0].cluster_region = cluster_region
 
         start_time = request.POST.get('start_time', None)
         if start_time:
@@ -271,6 +281,6 @@ class EvictionView(APIView):
             evc.eviction_time = eviction_time
 
 
-        evc.save()
+        evc[0].save()
         print('Success')
         return JsonResponse({'message':'success'})

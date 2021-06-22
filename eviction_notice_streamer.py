@@ -97,7 +97,7 @@ def run_eviction_streamer_spot():
     data =  pull_price(region_code, size.replace('Standard_', '').replace('_',' '))
     spot_max_price = data[3]
     resource_group_name = resource_prefix + region_code
-    vm_name = resource_prefix + 'vm-' + '22'
+    vm_name = resource_prefix + 'vm-' + '23'
     print("Spot max price is: ", spot_max_price)
 
     # create a VM

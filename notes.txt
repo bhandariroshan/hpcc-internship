@@ -9,6 +9,11 @@ az aks nodepool list --cluster-name
 
 az vm run-command invoke --resource-group roshan-test-eastus --name roshan-test-vm-19 --command-id RunShellScript --scripts "apt-get update && apt-get install git && apt-get install python3-pip && python3 -m pip install requests && git clone https://github.com/bhanduroshan/hpcc-internship.git &&  cd hpcc-internship && python handle_eviction.py"
 
+
+Simulate Eviction
+
+az vm simulate-eviction --resource-group roshan-test-eastus --name roshan-test-vm-23
+
 Demonset
 -----------
 -1. az aks install-cli -- Install kubectl
@@ -19,7 +24,6 @@ Demonset
 4. kubectl apply -f ./k8s   # Update script in ./k8s/sampleconfigmap.yaml to use your installation instructions
 5. kubectl get nodes 
 6. kubectl get ds -n node-installer
-
 
 
 $ kubectl debug node/aks-nodepool3-21691289-vmss000001 -it --image=mcr.microsoft.com/aks/fundamental/base-ubuntu:v0.0.11
