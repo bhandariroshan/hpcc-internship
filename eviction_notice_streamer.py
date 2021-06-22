@@ -32,6 +32,7 @@ def create_vm(resource_group_name, vm_name, image, priority, max_price, eviction
         --eviction-policy {} \
         --size {}\
         --subscription {} \
+        --ssh-key-values ./roshan-api_key.pem \
     ".format(
         resource_group_name, 
         vm_name,
@@ -42,25 +43,24 @@ def create_vm(resource_group_name, vm_name, image, priority, max_price, eviction
         size,
         subscription
     )
-    # print(command)
+    print(command)
     status, res = subprocess.getstatusoutput(command) 
     print(status, res)
 
 
 def invoke_spot_eviction_notice_streaming(resource_group, vm_name):
-    command = '''
-        sudo apt-get update && sudo apt-get install git && git clone https://github.com/bhanduroshan/hpcc-internship.git && cd hpcc-internship && 
-        python handle_eviction.py
-    '''
-
-
-    azure_run_command = "az vm run-command invoke -g {} -n {} --command-id RunShellScript --scripts '{}' ".format(
+    azure_run_command = 'az vm run-command invoke --resource-group {} --name {} --command-id RunShellScript --scripts '
+    azure_run_command += '"sudo apt-get update && sudo apt-get -y install git && sudo apt-get -y install python3-pip && '
+    azure_run_command += 'sudo python3 -m pip install requests && sudo python3 -m pip install pytz && sudo git clone https://github.com/bhanduroshan/hpcc-internship.git && '
+    azure_run_command += 'cd hpcc-internship && sudo nohup python3 handle_eviction.py &"'
+    azure_run_command = azure_run_command.format(
         resource_group,
-        vm_name,
-        command
+        vm_name
     )
 
-    status, result = subprocess.getstatusoutput(command)
+    print(azure_run_command)
+
+    status, result = subprocess.getstatusoutput(azure_run_command)
     print(status, result)
 
 
@@ -97,7 +97,7 @@ def run_eviction_streamer_spot():
     data =  pull_price(region_code, size.replace('Standard_', '').replace('_',' '))
     spot_max_price = data[3]
     resource_group_name = resource_prefix + region_code
-    vm_name = resource_prefix + 'vm-' + '15'
+    vm_name = resource_prefix + 'vm-' + '22'
     print("Spot max price is: ", spot_max_price)
 
     # create a VM
@@ -108,6 +108,7 @@ def run_eviction_streamer_spot():
 
     # Get inside a VM and pull the script for monitoring and run it
     invoke_spot_eviction_notice_streaming(resource_group_name, vm_name)
+    print("Success.")
 
 
 if __name__ == '__main__':

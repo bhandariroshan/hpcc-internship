@@ -1,0 +1,43 @@
+az vmss show -g roshan-test-eastus -n nodepool3
+
+az vmss list-instances -g {resourceGroupName} -n {vmScaleSetName}
+
+az vmss list-instances -g roshan-test-eastus  -n aks-nodepool3-21691289-vmss000002
+
+az aks nodepool list --cluster-name
+                     --resource-group
+
+az vm run-command invoke --resource-group roshan-test-eastus --name roshan-test-vm-19 --command-id RunShellScript --scripts "apt-get update && apt-get install git && apt-get install python3-pip && python3 -m pip install requests && git clone https://github.com/bhanduroshan/hpcc-internship.git &&  cd hpcc-internship && python handle_eviction.py"
+
+Demonset
+-----------
+-1. az aks install-cli -- Install kubectl
+0. az aks get-credentials --resource-group roshan-test-eastus --name test-roshan-hpcc-7
+1. kubectl get nodes -o wide
+2. git clone https://github.com/patnaikshekhar/AKSNodeInstaller
+3. cd AKSNodeInstaller
+4. kubectl apply -f ./k8s   # Update script in ./k8s/sampleconfigmap.yaml to use your installation instructions
+5. kubectl get nodes 
+6. kubectl get ds -n node-installer
+
+
+
+$ kubectl debug node/aks-nodepool3-21691289-vmss000001 -it --image=mcr.microsoft.com/aks/fundamental/base-ubuntu:v0.0.11
+ kubectl debug node/aks-nodepool3-21691289-vmss000002 -it --image=mcr.microsoft.com/aks/fundamental/base-ubuntu:v0.0.11
+
+
+
+Simulate Eviction VMSS
+ https://docs.microsoft.com/en-us/rest/api/compute/virtual-machine-scale-set-vms/simulate-eviction
+ https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-instance-ids
+
+SSH inside AKS nodes
+	https://docs.microsoft.com/en-us/azure/aks/ssh
+
+
+Demonset
+	https://github.com/patnaikshekhar/AKSNodeInstaller/blob/master/k8s/daemonset.yaml
+	https://www.youtube.com/watch?v=vAIW4ZSP44I&ab_channel=ShekharPatnaik
+	https://docs.microsoft.com/en-us/azure/aks/concepts-clusters-workloads
+
+

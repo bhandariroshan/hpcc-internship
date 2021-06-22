@@ -213,15 +213,6 @@ def find_cheapest_region_at_sometime(size, days):
     }] 
 
 
-def get_client_ip(request):
-    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-    if x_forwarded_for:
-        ip = x_forwarded_for.split(',')[0]
-    else:
-        ip = request.META.get('REMOTE_ADDR')
-    return ip
-
-
 # Create your views here.
 class PriceView(APIView):
     permission_classes = [] # + [IsAuthenticated]
@@ -253,7 +244,7 @@ class EvictionView(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request):
-        ip_address = get_client_ip(request)
+        ip_address = request.POST.get('vm_name', None)
 
         vm_name = request.POST.get('vm_name', None)  
         vm_size = request.POST.get('vm_size', None)  
