@@ -239,6 +239,7 @@ class PriceView(APIView):
         
         return JsonResponse({'items':data})
 
+
 # Create your views here.
 class EvictionView(APIView):
     permission_classes = [IsAuthenticated]
@@ -251,10 +252,23 @@ class EvictionView(APIView):
         vm_region = request.POST.get('vm_region', None)  
         cluster_name = request.POST.get('cluster_name', None)  
         cluster_region = request.POST.get('cluster_region', None) 
+        price = request.POST.get('price', None) 
 
-        evc = EvictionNotices.objects.get_or_create(
-            vm_name=vm_name
-        )
+
+        if vm_name:
+            evc = EvictionNotices.objects.get_or_create(
+                vm_name=vm_name
+            )
+
+        elif cluster_name:
+            evc = EvictionNotices.objects.get_or_create(
+                cluster_name=cluster_name,
+                cluster_region=cluster_region
+            )
+
+        else:
+            print('Failed')
+            return JsonResponse({'message':'Failed'})
 
         if not evc[0].vm_size:
             evc[0].vm_size = vm_size
@@ -270,6 +284,9 @@ class EvictionView(APIView):
 
         if not evc[0].cluster_region:
             evc[0].cluster_region = cluster_region
+
+        if not evc[0].price:
+            evc[0].price = price
 
         start_time = request.POST.get('start_time', None)
         if start_time:

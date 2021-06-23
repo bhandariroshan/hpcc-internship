@@ -42,6 +42,8 @@ class EvictionNotices(models.Model):
     cluster_name = models.CharField(max_length=200, blank=True, null=True)
     cluster_region = models.CharField(max_length=200, blank=True, null=True)
 
+    price = models.CharField(max_length=200, blank=True, null=True)
+
     eviction_time = models.CharField(max_length=200, blank=True, null=True)
     eviction_notice = JSONField(default=dict, blank=True, null=True)
  
