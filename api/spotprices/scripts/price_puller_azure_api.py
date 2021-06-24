@@ -20,7 +20,6 @@ def pull_price(region_name, sizes, start, end, now_time=str(datetime.datetime.no
         if (count+1)%19 == 0:
             spot_end_point = end_point + params[:-3] + "and armRegionName eq '" + str(region_name) + "'" 
             data += call_end_point(spot_end_point)
-            time.sleep(5)
             params = ''
 
     if params:
@@ -33,7 +32,6 @@ def pull_price(region_name, sizes, start, end, now_time=str(datetime.datetime.no
         if (count+1)%19 == 0:
             regular_end_point = end_point + params[:-3] + "and armRegionName eq '" + str(region_name) + "'" 
             data += call_end_point(regular_end_point)
-            time.sleep(5)
             params = ''
 
     if params:
