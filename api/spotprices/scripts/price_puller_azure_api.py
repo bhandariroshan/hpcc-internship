@@ -61,7 +61,7 @@ def pull_price(region_name, sizes, start, end, now_time=str(datetime.datetime.no
 
         if not is_windows_instance and 'windows' not in each_instance['productName'].lower() and \
             each_instance['type'] == 'Reservation' and each_instance['reservationTerm'] == '3 Years':
-            multi_result[region_name][instance_size][6] = each_instance['unitPrice']/(365*24)
+            multi_result[region_name][instance_size][6] = each_instance['unitPrice']/(365*24*3)
  
 def process_savings(data): 
     per_saving_pay_as_you_go = float('-inf')
