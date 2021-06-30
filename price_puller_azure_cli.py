@@ -34,7 +34,7 @@ def pull_price(resource_name, size, now_time):
     )
     # print(command)
     status, res = subprocess.getstatusoutput(command) 
-    # print(res)
+    print(res)
     result = res.split("is lower than the current spot price")
     try:
         result = result[1].split("for Azure Spot VM")
