@@ -47,52 +47,69 @@ spot_region_map = {
     'australiacentral2': ['Standard_M416-104s_v2', 'Standard_M128ms', 'Standard_D4s_v4', 'Standard_F1s', 'Standard_E4-2s_v4', 'Standard_E32_v3', 'Standard_A4m_v2', 'Standard_D2s_v3', 'Standard_D8ds_v5', 'Standard_E64-32s_v4', 'Standard_E32-16s_v4', 'Standard_M128-64ms', 'Standard_E4_v4', 'Standard_M64s', 'Standard_D16_v4', 'Standard_D2d_v4', 'Standard_E32-8s_v4', 'Standard_E16-4ds_v4', 'Standard_D8d_v4', 'Standard_DS12-2_v2', 'Standard_E20_v3', 'Standard_D4ds_v4', 'Standard_F48s_v2', 'Standard_F16', 'Standard_F16s', 'Standard_DS14-8_v2', 'Standard_D2_v4', 'Standard_A5', 'Standard_M128', 'Standard_M128-32ms', 'Standard_E48d_v4', 'Standard_F8s_v2', 'Standard_M32s', 'Standard_A8m_v2', 'Standard_E16_v5', 'Standard_D11_v2', 'Standard_D64d_v4', 'Standard_D2ds_v4', 'Standard_D48ds_v5', 'Standard_A1', 'Standard_D14_v2', 'Standard_D8_v5', 'Standard_E2d_v5', 'Standard_D32_v5', 'Standard_D2s_v4', 'Standard_M64ms', 'Standard_E8-4ds_v4', 'Standard_M16ms', 'Standard_E8d_v4', 'Standard_E8-4s_v3', 'Standard_D32-16s_v3', 'Standard_D48ds_v4', 'Standard_E32d_v4', 'Standard_E8ds_v4', 'Standard_E16s_v3', 'Standard_D1_v2', 'Standard_E64_v5', 'Standard_M8-4ms', 'Standard_M208-52ms_v2', 'Standard_D96ds_v5', 'Standard_E48_v3', 'Standard_F72s_v2', 'Standard_E2ds_v4', 'Standard_E2_v4', 'Standard_D4_v5', 'Standard_E48ds_v4', 'Standard_D64d_v5', 'Standard_E32-8s_v3', 'Standard_E32_v5', 'Standard_D64_v4', 'Standard_D15_v2', 'Standard_D4s_v5', 'Standard_E32s_v3', 'Basic_A1', 'Standard_D48d_v5', 'Standard_E64d_v4', 'Standard_A2m_v2', 'Standard_M208-104ms_v2', 'Standard_F4s', 'Standard_D8_v3', 'Standard_E16_v3', 'Standard_DS11-1_v2', 'Standard_DS15i_v2', 'Standard_D4ds_v5', 'Standard_E64s_v4', 'Standard_D16ds_v4', 'Standard_E48_v4', 'Standard_E16-4s_v3', 'Standard_D16d_v4', 'Standard_E64_v3', 'Standard_D4_v4', 'Standard_A8_v2', 'Standard_E8s_v3', 'Standard_DS11_v2', 'Standard_D8s_v3', 'Standard_D4_v3', 'Standard_M416s_v2', 'Standard_E20s_v4', 'Standard_D2_v5', 'Standard_D64ds_v5', 'Standard_D16s_v4', 'Standard_D32-8s_v3', 'Standard_F32s_v2', 'Standard_E32s_v4', 'Standard_E4_v3', 'Standard_E4ds_v4', 'Standard_D4_v2', 'Standard_F4s_v2', 'Standard_DS4_v2', 'Standard_A3', 'Standard_D64_v3', 'Standard_M32ls', 'Standard_E2s_v4', 'Standard_D13_v2', 'Standard_D32d_v5', 'Standard_M416ms_v2', 'Standard_DS14-4_v2', 'Standard_E32_v4', 'Standard_A0', 'Standard_E2d_v4', 'Standard_D2s_v5', 'Standard_D8d_v5', 'Standard_E20ds_v4', 'Standard_A2', 'Standard_DS1_v2', 'Standard_M64-32ms', 'Standard_E96d_v5', 'Standard_E16-4s_v4', 'Standard_M8ms', 'Standard_D64-32s_v3', 'Standard_D48_v4', 'Standard_E64-32s_v3', 'Standard_D64-16s_v3', 'Standard_M32-16ms', 'Standard_DS13_v2', '', 'Standard_M32ts', 'Standard_D64s_v4', 'Standard_D4d_v4', 'Standard_E4s_v4', 'Standard_DS13-4_v2', 'Standard_M64ls', 'Standard_E16-8s_v3', 'Standard_D2_v3', 'Standard_F8s', 'Standard_D48d_v4', 'Standard_D5_v2', 'Standard_D3_v2', 'Standard_D48s_v5', 'Standard_E4-2ds_v4', 'Standard_F64s_v2', 'Standard_E64-32ds_v4', 'Standard_M32ms', 'Standard_M32-8ms', 'Standard_D2_v2', 'Standard_D15i_v2', 'Standard_D64s_v5', 'Standard_E48_v5', 'Standard_E80is_v4', 'Standard_E8-2s_v4', 'Standard_DS14_v2', 'Standard_E96_v5', 'Standard_E48s_v3', 'Standard_M208ms_v2', 'Standard_E20_v4', 'Standard_D48s_v3', 'Standard_E20d_v4', 'Standard_D8s_v5', 'Standard_E2_v5', 'Standard_DS5_v2', 'Standard_E48s_v4', 'Standard_E2s_v3', 'Standard_D48_v5', 'Standard_D96d_v5', 'Standard_E4-2s_v3', 'Standard_D12_v2', 'Standard_E8_v4', 'Standard_M416-208s_v2', 'Standard_M8-2ms', 'Standard_E16ds_v4', 'Standard_E8_v5', 'Standard_M64m', 'Standard_E16d_v5', 'Standard_DS2_v2', 'Standard_D16ds_v5', 'Standard_A2_v2', 'Standard_E8-2s_v3', 'Standard_D48_v3', 'Standard_E64s_v3', 'Standard_A4_v2', 'Standard_D32_v4', 'Standard_E48d_v5', 'Standard_D32s_v3', 'Standard_D64ds_v4', 'Standard_E4d_v5', 'Standard_M128s', 'Standard_F2s', 'Standard_E16_v4', 'Standard_D64s_v3', 'Standard_DS12_v2', 'Standard_D96s_v5', 'Standard_D8s_v4', 'Standard_E16-8ds_v4', 'Standard_E64-16s_v3', 'Standard_E16d_v4', 'Standard_F1', 'Standard_DS3_v2', 'Standard_DS13-2_v2', 'Standard_D4s_v3', 'Standard_D32ds_v5', 'Standard_E8d_v5', 'Standard_M208s_v2', 'Standard_E32ds_v4', 'Standard_E64d_v5', 'Standard_F8', 'Standard_DS12-1_v2', 'Basic_A2', 'Basic_A4', 'Standard_E8-2ds_v4', 'Standard_D16d_v5', 'Standard_M416-104ms_v2', 'Standard_E8s_v4', 'Basic_A0', 'Standard_M208-104s_v2', 'Standard_E32-16s_v3', 'Standard_E64-16s_v4', 'Standard_A1_v2', 'Standard_M16-4ms', 'Standard_D2ds_v5', 'Standard_E64_v4', 'Standard_F2s_v2', 'Standard_M64', 'Standard_M16s', 'Standard_F2', 'Standard_E32-8ds_v4', 'Standard_D2d_v5', 'Standard_D96_v5', 'Standard_E16-8s_v4', 'Standard_A4', 'Standard_E20d_v5', 'Standard_M16-8ms', 'Standard_E8_v3', 'Standard_E64-16ds_v4', 'Standard_E2_v3', 'Standard_D16_v5', 'Standard_D48s_v4', 'Standard_E16s_v4', 'Standard_D16_v3', 'Standard_D16s_v5', 'Standard_D32s_v4', 'Standard_M64-16ms', 'Standard_A7', 'Standard_D32ds_v4', 'Standard_E4d_v4', 'Standard_D8_v4', 'Standard_M208-52s_v2', 'Standard_M128m', 'Standard_F16s_v2', 'Standard_A6', 'Standard_E32-16ds_v4', 'Standard_E32d_v5', 'Standard_D32_v3', 'Standard_M416is_v2', 'Standard_D16s_v3', 'Standard_E20_v5', 'Standard_D32s_v5', 'Standard_D8ds_v4', 'Standard_DS15_v2', 'Basic_A3', 'Standard_D64_v5', 'Standard_E64ds_v4', 'Standard_F4', 'Standard_E80ids_v4', 'Standard_E20s_v3', 'Standard_E8-4s_v4', 'Standard_E4_v5', 'Standard_E4s_v3', 'Standard_M416-208ms_v2', 'Standard_D32d_v4', 'Standard_D4d_v5']
 }
 
+# Lv2 series 
+# Dv3 serie
+# Ev4 series
+
 region_codes = [
     'eastus',
-    'westus',
+    # 'westus',
     'japaneast',
     'southindia',
-    'centralindia',
+    # 'centralindia',
     'ukwest',
-    'germanywestcentral',
-    'eastasia',
-    'brazilsouth',
-    'canadacentral',
-    'australiaeast',
+    # 'germanywestcentral',
+    'eastasia', 
+    #'canadacentral', 
     'australiacentral'
 ]
 
 
 sizes = [
+	"Standard_D2_v3",
     "Standard_D2s_v3",        # 4 vCPU, 32 Gb Ram
-    "Standard_A8_v2",         # 8 vCPU, 16 Gb Ram
+    # "Standard_A8_v2",         # 8 vCPU, 16 Gb Ram
     "Standard_NC8as_T4_v3",    # 8   56 GiB"
-    "Standard_NV6s_v2",
+    # "Standard_NV6s_v2",
     "Standard_H8m",
     "Standard_D4a_v4",        # 4   16 GiB  100 GiB
     "Standard_D8a_v4",        # 8   32 GiB  200 GiB
-    "Standard_D4as_v4",       # 4   16 GiB  32 GiB
-    "Standard_D8as_v4",       # 8   32 GiB  64 GiB
-    "Standard_D8ds_v5",       # 8   32 GiB  300 GiB 
+    # "Standard_D4as_v4",       # 4   16 GiB  32 GiB
+    # "Standard_D8as_v4",       # 8   32 GiB  64 GiB
+    # "Standard_D8ds_v5",       # 8   32 GiB  300 GiB 
     "Standard_D2_v3",         # 2   8 GiB   50 GiB
     "Standard_D4_v3",         # 4   16 GiB  100 GiB
     "Standard_D8_v3",         # 8   32 GiB  200 GiB
-    "Standard_DS3_v2",        # 4   14 GiB  28 GiB
-    "Standard_F4s_v2",        # 4   8 GiB   32 GiB
-    "Standard_F8s_v2",        # 8   16 GiB  64 GiB
-    "Standard_F4",            # 4   8 GiB   64 GiB
-    "Standard_F8",            # 8   16 GiB  128 GiB  
+    # "Standard_DS3_v2",        # 4   14 GiB  28 GiB
+    # "Standard_F4s_v2",        # 4   8 GiB   32 GiB
+    # "Standard_F8s_v2",        # 8   16 GiB  64 GiB
+    # "Standard_F4",            # 4   8 GiB   64 GiB
+    # "Standard_F8",            # 8   16 GiB  128 GiB  
     "Standard_E4ds_v5",        # 4   32 GiB  150 GiB
     "Standard_E8ds_v5",       # 8   64 GiB  300 GiB
-    "Standard_E2s_v3",        # 2   16 GiB  32 GiB
+    # "Standard_E2s_v3",        # 2   16 GiB  32 GiB
     "Standard_E4s_v3",        # 4   32 GiB  64 GiB  
     "Standard_E8s_v3",        # 8   64 GiB  128 GiB
-    "Standard_NC6s_v3",       # 6   56 GiB  340 GiB
-    "Standard_NC12s_v3",      # 12  112 GiB 680 GiB
-    "Standard_NC4as_T4_v3",   # 4   28 GiB  180 GiB"
-    "Standard_NV12s_v2",
+    # "Standard_NC6s_v3",       # 6   56 GiB  340 GiB
+    # "Standard_NC12s_v3",      # 12  112 GiB 680 GiB
+    #"Standard_NC4as_T4_v3",   # 4   28 GiB  180 GiB"
+    # "Standard_NV12s_v2",
     "Standard_H8",
-    "Standard_H16"
+    "Standard_H16",
+    "Standard_L8s_v2",
+    "Standard_L16s_v2",
+    "Standard_D16_v3",
+    "Standard_D4s_v3",
+    "Standard_D8s_v3",
+    "Standard_E2_v4",
+    "Standard_E4_v4",
+    "Standard_E8_v4",
+    "Standard_E16_v4",
+    "Standard_E2s_v4",
+    "Standard_E4s_v4",
+    # "Standard_E8s_v4"
+
+
 ]
 
 resource_names = [resource_prefix + location for location in region_codes]

@@ -63,11 +63,15 @@ def callback(data):
 def pull_multiple(resource_names, instance_sizes, now_time, is_windows_instances=False):
     global multi_result
     multi_result = [] 
+    count = 0
     p = ThreadPool(n_threads)
     for resource_name in resource_names: 
         for size in instance_sizes:
-            p.apply_async(pull_price, args=(resource_name, size, now_time,), callback=callback)
-    
+            print(resource_name, size)
+            if 'Standard_' + size.replace(' ', '_') in spot_region_map[resource_name]:
+                count += 1
+                p.apply_async(pull_price, args=(resource_name, size, now_time,), callback=callback)
+    print("Count ", count)
     p.close()
     p.join()
     return multi_result

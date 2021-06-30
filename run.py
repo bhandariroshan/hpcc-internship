@@ -160,7 +160,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--method', 
         type=str, 
-        default='--api',
+        default='api',
         help='Can be one of API or CLI. \
             \n API: Pull azure Spot price from API. \
             \n CLI: Pull azure spot price from CLI.'

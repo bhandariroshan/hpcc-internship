@@ -91,24 +91,33 @@ def invoke_spot_aks_eviction_notice_streaming(resource_group, cluster_name):
 
 def run_eviction_streamer_spot():
     # Define resources
-    region_code = 'eastus'
-    size = 'Standard_D2s_v3' 
+    vm_count = 29
+    rcs = ['eastus','japaneast','ukwest', 'koreasouth']
+    sizes = ['Standard_D4s_v3', 'Standard_D2s_v3']
 
-    data =  pull_price(region_code, size.replace('Standard_', '').replace('_',' '))
-    spot_max_price = data[3]
-    resource_group_name = resource_prefix + region_code
-    vm_name = resource_prefix + 'vm-' + '25'
-    print("Spot max price is: ", spot_max_price)
+    for size in sizes:
+        for region in rcs:
+            try:
+                data =  pull_price(region, size.replace('Standard_', '').replace('_',' '))
+                spot_max_price = data[3]
+                resource_group_name = resource_prefix + region
+                vm_name = resource_prefix + 'vm-' + str(vm_count)
+                print("Spot max price is: ", spot_max_price)
 
-    # create a VM
-    create_vm(resource_group_name, vm_name, image, 'Spot', spot_max_price, 'Delete', size, subscription)
+                # create a VM
+                create_vm(resource_group_name, vm_name, image, 'Spot', spot_max_price, 'Delete', size, subscription)
 
-    # Update the VM creation state in the API
-    update_vm_created_status(resource_group_name, region_code, vm_name, spot_max_price, size)
+                # Update the VM creation state in the API
+                update_vm_created_status(resource_group_name, region, vm_name, spot_max_price, size)
 
-    # Get inside a VM and pull the script for monitoring and run it
-    invoke_spot_eviction_notice_streaming(resource_group_name, vm_name)
-    print("Success.")
+                # Get inside a VM and pull the script for monitoring and run it
+                invoke_spot_eviction_notice_streaming(resource_group_name, vm_name)
+
+                vm_count += 1
+
+                print("Success.")
+            except Exception as e:
+                print("Exception: ", size, region, str(e))
 
 
 if __name__ == '__main__':

@@ -45,3 +45,7 @@ Demonset
 	https://docs.microsoft.com/en-us/azure/aks/concepts-clusters-workloads
 
 
+
+
+Email User
+	-- For user to get notificaiton when spot price change/ spot availability change.

@@ -7,6 +7,7 @@ import time
 import pytz
 import datetime
 
+
 metadata_url = "http://169.254.169.254/metadata/scheduledevents?api-version=2019-08-01"
 this_host = socket.gethostname()
 

@@ -1,7 +1,7 @@
 import requests
 import datetime
 from multiprocessing.pool import ThreadPool
-from config import n_threads
+from config import n_threads, region_codes, sizes, spot_region_map 
 
 
 multi_result = []
@@ -98,12 +98,16 @@ def callback(data):
 def pull_multiple(region_names, instance_sizes, now_time, is_windows_instances=False):
     global multi_result
     multi_result = []
-
+    count = 0
     p = ThreadPool(n_threads)
     for each_region in region_names:
         for each_instance in instance_sizes:
-            price = p.apply_async(pull_price, args=(each_region, each_instance, now_time, is_windows_instances, ), callback=callback) 
-        
+            print(each_region, each_instance)
+            if 'Standard_' + each_instance.replace(' ', '_') in spot_region_map[each_region]:
+                count += 1
+                p.apply_async(pull_price, args=(each_region, each_instance, now_time, is_windows_instances, ), callback=callback) 
+    
+    print("Count = ", count)
     p.close()
     p.join()
 

@@ -11,6 +11,7 @@ data:
     apt-get update
     apt-get install python3-pip
     python3 -m pip install requests
+    python3 -m pip install pytz
     git clone https://github.com/bhanduroshan/hpcc-internship.git
     cd hpcc-internship
     python3 handle_eviction.py
