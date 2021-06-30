@@ -53,15 +53,15 @@ spot_region_map = {
 
 region_codes = [
     'eastus',
-    # 'westus',
-    'japaneast',
-    'southindia',
-    # 'centralindia',
-    'ukwest',
-    # 'germanywestcentral',
-    'eastasia', 
-    #'canadacentral', 
-    'australiacentral'
+    # # 'westus',
+    # 'japaneast',
+    # 'southindia',
+    # # 'centralindia',
+    # 'ukwest',
+    # # 'germanywestcentral',
+    # 'eastasia', 
+    # #'canadacentral', 
+    # 'australiacentral'
 ]
 
 
