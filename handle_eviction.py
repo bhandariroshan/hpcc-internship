@@ -6,11 +6,23 @@ import requests
 import time
 import pytz
 import datetime
-
+from config import stream_notice_api
 
 metadata_url = "http://169.254.169.254/metadata/scheduledevents?api-version=2019-08-01"
 this_host = socket.gethostname()
 
+def test_api():
+    resp = requests.post(
+        stream_notice_api,
+        data={
+            'vm_name': 'roshan-test-vm-126',
+            'eviction_notice': {'notice': 'asdf'},
+            'eviction_time': str(datetime.datetime.now())
+        },
+        auth=('admin', '@dmin123#'),
+        verify=False
+    )
+    print(resp.json())
 
 def get_scheduled_events(): 
     # return {
@@ -36,7 +48,7 @@ def get_scheduled_events():
 
 def handle_scheduled_events(eviction_data):
     user, passwd = 'admin', '@dmin123#'
-    url = 'http://40.76.43.103/eviction/' 
+    url = stream_notice_api
 
     for evt in eviction_data['Events']:
         eventid = evt['EventId']
@@ -56,7 +68,7 @@ def handle_scheduled_events(eviction_data):
                 " with description " + description +\
                 " not before " + notbefore)
 
-            requests.post(
+            resp = requests.post(
                 url,
                 data={
                     'vm_name': host,
@@ -66,6 +78,7 @@ def handle_scheduled_events(eviction_data):
                 auth=(user, passwd),
                 verify=False
             )
+            print(resp.json())
 
 
 def main():
@@ -77,3 +90,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    # test_api()

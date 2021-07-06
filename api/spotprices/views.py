@@ -247,7 +247,7 @@ class EvictionView(APIView):
     def post(self, request):
         ip_address = request.POST.get('vm_name', None)
 
-        vm_name = request.POST.get('vm_name', None)  
+        vm_name = request.POST.get('vm_name', None)
         vm_size = request.POST.get('vm_size', None)  
         vm_region = request.POST.get('vm_region', None)  
         cluster_name = request.POST.get('cluster_name', None)  
@@ -257,7 +257,7 @@ class EvictionView(APIView):
 
         if vm_name:
             evc = EvictionNotices.objects.get_or_create(
-                vm_name=vm_name
+                vm_name=vm_name.strip()
             )
 
         elif cluster_name:

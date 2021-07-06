@@ -32,6 +32,7 @@ def create_vm(resource_group_name, vm_name, image, priority, max_price, eviction
         --eviction-policy {} \
         --size {}\
         --subscription {} \
+        --tags price={} \
         --ssh-key-values ./roshan-api_key.pem \
     ".format(
         resource_group_name, 
@@ -41,7 +42,8 @@ def create_vm(resource_group_name, vm_name, image, priority, max_price, eviction
         max_price, 
         eviction_policy, 
         size,
-        subscription
+        subscription,
+        max_price
     )
     print(command)
     status, res = subprocess.getstatusoutput(command) 
@@ -50,7 +52,7 @@ def create_vm(resource_group_name, vm_name, image, priority, max_price, eviction
 
 def invoke_spot_eviction_notice_streaming(resource_group, vm_name):
     azure_run_command = 'az vm run-command invoke --resource-group {} --name {} --command-id RunShellScript --scripts '
-    azure_run_command += '"sudo apt-get update && sudo apt-get -y install git && sudo apt-get -y install python3-pip && '
+    azure_run_command += '"sudo apt-get update && sudo apt-get -y install git && cd /home && sudo apt-get -y install python3-pip && '
     azure_run_command += 'sudo python3 -m pip install requests && sudo python3 -m pip install pytz && sudo git clone https://github.com/bhanduroshan/hpcc-internship.git && '
     azure_run_command += 'cd hpcc-internship && sudo nohup python3 handle_eviction.py &"'
     azure_run_command = azure_run_command.format(
@@ -66,7 +68,7 @@ def invoke_spot_eviction_notice_streaming(resource_group, vm_name):
 
 def update_vm_created_status(resource_group_name, region_code, vm_name, spot_max_price, size):
     user, passwd = 'admin', '@dmin123#'
-    url = 'http://40.76.43.103/eviction/'
+    url = stream_notice_api
 
     est = pytz.timezone('US/Eastern')
     requests.post(
@@ -91,9 +93,12 @@ def invoke_spot_aks_eviction_notice_streaming(resource_group, cluster_name):
 
 def run_eviction_streamer_spot():
     # Define resources
-    vm_count = 29
-    rcs = ['eastus','japaneast','ukwest', 'koreasouth']
-    sizes = ['Standard_D4s_v3', 'Standard_D2s_v3']
+    vm_count = 115
+    rcs =  region_codes
+    sizes = [
+                'Standard_D2s_v3',
+                'Standard_D4s_v3'
+            ]
 
     for size in sizes:
         for region in rcs:
@@ -119,6 +124,7 @@ def run_eviction_streamer_spot():
             except Exception as e:
                 print("Exception: ", size, region, str(e))
 
+            break
 
 if __name__ == '__main__':
     run_eviction_streamer_spot()

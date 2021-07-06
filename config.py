@@ -2,6 +2,8 @@ subscription = 'us-hpccplatform-dev'
 subscription_id = 'ec0ba952-4ae9-4f69-b61c-4b96ff470038'
 resource_prefix = 'roshan-test-'
 
+stream_notice_api = 'http://137.135.85.84/eviction/'
+
 n_threads = 5
 
 image = "UbuntuLTS"
