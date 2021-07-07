@@ -93,7 +93,7 @@ def invoke_spot_aks_eviction_notice_streaming(resource_group, cluster_name):
 
 def run_eviction_streamer_spot():
     # Define resources
-    vm_count = 115
+    vm_count = 121
     rcs =  region_codes
     sizes = [
                 'Standard_D2s_v3',
@@ -101,7 +101,7 @@ def run_eviction_streamer_spot():
             ]
 
     for size in sizes:
-        for region in rcs:
+        for region in ['eastus']:
             try:
                 data =  pull_price(region, size.replace('Standard_', '').replace('_',' '))
                 spot_max_price = data[3]
