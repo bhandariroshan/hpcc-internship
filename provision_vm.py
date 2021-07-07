@@ -1,19 +1,25 @@
 # Import the needed credential and management objects from the libraries.
+import os
+import time
 from azure.identity import AzureCliCredential
 from azure.mgmt.resource import ResourceManagementClient
 from azure.mgmt.network import NetworkManagementClient
 from azure.mgmt.compute import ComputeManagementClient
-import os
+from azure.mgmt.compute.v2019_07_01.models import VirtualMachinePriorityTypes, VirtualMachineEvictionPolicyTypes, BillingProfile
 
 
+start = time.time()
+
+vm_prefix = "provision-test-roshan-"
+vm_id = "vm-003"
 # Network and IP address names
-VNET_NAME = "python-example-vnet"
-SUBNET_NAME = "python-example-subnet"
-IP_NAME = "python-example-ip"
-IP_CONFIG_NAME = "python-example-ip-config"
-NIC_NAME = "python-example-nic"
+VNET_NAME = "python-example-vnet" + "-" + vm_id
+SUBNET_NAME = "python-example-subnet"  + "-" + vm_id
+IP_NAME = "python-example-ip"  + "-" + vm_id
+IP_CONFIG_NAME = "python-example-ip-config"  + "-" + vm_id
+NIC_NAME = "python-example-nic"  + "-" + vm_id
 
-VM_NAME = "ExampleVM"
+VM_NAME = vm_prefix + vm_id
 USERNAME = "azureuser"
 PASSWORD = "ChangePa$$w0rd24"
 vm_size = "Standard_DS1_v2"
@@ -153,10 +159,16 @@ poller = compute_client.virtual_machines.begin_create_or_update(RESOURCE_GROUP_N
             "network_interfaces": [{
                 "id": nic_result.id,
             }]
-        }        
+        } ,
+        'priority':VirtualMachinePriorityTypes.spot, # use Azure spot intance
+        'eviction_policy':VirtualMachineEvictionPolicyTypes.deallocate , #For Azure Spot virtual machines, the only supported value is 'Deallocate'
+        'billing_profile': BillingProfile(max_price=float(2))        
     }
 )
 
 vm_result = poller.result()
 
 print(f"Provisioned virtual machine {vm_result.name}")
+
+end = time.time()
+print("Time taken=", end-start)
