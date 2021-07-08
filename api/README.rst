@@ -12,8 +12,7 @@ Python and Django application to find cheapest region in Azure Spot and find ave
 
 :License: MIT
 
-Setup Instructions
-------------------------------------------
+## Setup Instructions
 To update the linux machine using the following (optional if using windows):
 
 ```
