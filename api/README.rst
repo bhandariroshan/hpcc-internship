@@ -83,7 +83,11 @@ Setup Instructions
      ``sudo apt install postgresql postgresql-contrib``
 
 6. Loginto the postges and create database using:
-    ``sudo -u postgres `` and ``createdb spotinstances``
+    ``sudo -u postgres `` 
+    
+    and 
+    
+    ``createdb spotinstances``
 
 7.  Set password for user "postgres" using:
      ``ALTER USER postgres WITH PASSWORD 'admin';``
@@ -107,10 +111,15 @@ Setup Instructions
 Deployment
 ----------
 1. In the server setup using setup instructions
+
 2. Open port 80 using web admin portal
+
 3. Run the following command to run the server
     ``sudo nohup python3 manage.py runserver 0.0.0.0:80 &``
+
 4. Run the cheapest operation on the browser using:
     ``http://<public_ip_address>/price/?operation=cheapest&size=Standard_DS1_v2``
+
 5. Run the average price analysis using the following on the browser
     ``http://<public_ip_address>/price/?operation=average&size=Standard_DS1_v2&region=eastus``
+
