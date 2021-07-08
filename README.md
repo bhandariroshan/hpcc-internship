@@ -21,6 +21,18 @@ This allows you to finding all VM instances available in different Azure regions
 python runcheap.py --operation findvms
 ```
 
+This allows you to find cheapest region using command line using api data pull:
+
+```
+python runcheap.py --operation cheapest --method api
+```
+
+This allows you to find cheapest region using command line using cli data pull:
+
+```
+python runcheap.py --operation cheapest --method cli
+```
+
 To get the results in your code for programmatic access you can import and use as shown below:
 
 To get the spot vms:
