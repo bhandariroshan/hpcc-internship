@@ -92,13 +92,13 @@ Setup Instructions
 
 7. Set password for user "postgres" using:
 
-    ``ALTER USER postgres WITH PASSWORD 'admin';``
+     ``ALTER USER postgres WITH PASSWORD 'admin';``
 
 8. Clone the repository
 9. Change directory into api folder.
 10. Install the requirements using the following instructions
 
-    ``sudo python3 -m pip install -r requirements.txt``
+     ``sudo python3 -m pip install -r requirements.txt``
 
 11. Migrate the app using: 
 
