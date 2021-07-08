@@ -12,9 +12,6 @@ Minimizing the cost of setting up cloud infrastructure is very important for all
 7. Scripts to simulate eviction from Azure Spot Instance
 8. Scripts to handle eviction from Azure Spot Instance 
 9. Find patterns for the best use case of off business hour region use of spot instance and savings measurement.
-10. Use Jenkins and Azure Spot Instances for HPCC Systems Development work.
-11. Potential spot instance use cases for HPCC Systems related jobs.
-
 
 ## Find all VM Instances in different Azure Regions and Sizes Available
 
@@ -26,21 +23,43 @@ python runcheap.py --operation findvms
 
 To get the results in your code for programmatic access you can import and use as shown below:
 ```
-from cheapes_region import find_region_and_size_available  
+from cheapest_region import find_region_and_size_available  
 vms = find_region_and_size_available()
 ```
 
 To get the spot vms:
 
 ```
-from cheapes_region import find_spot_region_and_size_available  
+from cheapest_region import find_spot_region_and_size_available  
 spot_vms = find_spot_region_and_size_available()
 ```
 
 The results are returned as a dictionary.
+ 
 
-## Find all Spot Instances in different regions and Sizes Available
+## Find Cheapest Region for a given size using api
+```
+from cheapest_region import find_cheapest_region_at_current_time_using_api
+data = find_cheapest_region_at_current_time_using_api(size='Standard_DS1_v2')
+```
 
-## Find Cheapest Region for a given size
+Returns a json containing details of the cheapest region
+
+## Find Cheapest Region for a given size using cli
+```
+from cheapest_region import find_cheapest_region_at_current_time_using_cli
+data = find_cheapest_region_at_current_time_using_cli(size='Standard_DS1_v2')
+```
+
+Returns a json containing details of the cheapest region
 
 ## Find Average Price of a size on a region
+
+```
+from cheapest_region import find_average_price_of_region_and_size
+data = find_average_price_of_region_and_size(region="eastus", size='Standard_DS1_v2',  days=1)
+```
+
+Returns a json containing details of the cheapest region
+
+
