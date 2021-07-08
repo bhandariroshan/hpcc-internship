@@ -65,7 +65,39 @@ Moved to `Live reloading and SASS compilation`_.
 
 .. _`Live reloading and SASS compilation`: http://cookiecutter-django.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
 
+
+Setup Instructions
+------------------------------------------
+1. Update the linux machine using the following (optional if using windows):
+sudo apt update
+2. Install Python3 on your machine
+3. Install pip3 on your machine using following command (if it is missing)
+`sudo apt-get install python3-pip`
+4. Upgrade your pip using following command
+`sudo python3 -m pip install -u pip`
+5. Install postgres database using the following command 
+`sudo apt install postgresql postgresql-contrib`
+6. Loginto the postges and create database using:
+`sudo -u postgres createdb spotinstances`
+7. Set password for user "postgres" using:
+`ALTER USER postgres WITH PASSWORD 'admin';`
+8. Clone the repository
+9. Change directory into api folder.
+10. Install the requirements using the following instructions
+`sudo python3 -m pip install -r requirements.txt`
+11. Migrate the app using: 
+`sudo python3 manage.py migrate`
+12. Create super user using the following:
+`sudo python3 manage.py createsuperuser`
+13. Run the server using the following command
+`sudo python3 manage.py runserver 0.0.0.0:8080`
+
+
 Deployment
 ----------
+1. In the server setup using setup instructions
+2. Open port 80 using web admin portal
+3. Run the following command to run the server
+`sudo python3 manage.py runserver 0.0.0.0:8080`
 
 The following details how to deploy this application.
