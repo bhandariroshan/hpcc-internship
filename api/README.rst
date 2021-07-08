@@ -82,30 +82,29 @@ Setup Instructions
 5.  Install postgres database using the following command 
      ``sudo apt install postgresql postgresql-contrib``
 
-6. Loginto the postges and create database using:
+6. Loginto the postges using:
     ``sudo -u postgres `` 
-    
-    and 
-    
+
+7. Create database using:
     ``createdb spotinstances``
 
-7.  Set password for user "postgres" using:
+8.  Set password for user "postgres" using:
      ``ALTER USER postgres WITH PASSWORD 'admin';``
 
-8. Clone the repository
+9. Clone the repository
 
-9. Change directory into api folder.
+10. Change directory into api folder.
 
-10.  Install the requirements using the following instructions
+11.  Install the requirements using the following instructions
       ``python3 -m pip install -r requirements.txt``
 
-11.  Migrate the app using: 
+12.  Migrate the app using: 
       ``python3 manage.py migrate``
 
-12.  Create super user using the following:
+13.  Create super user using the following:
       ``python3 manage.py createsuperuser``
 
-13.  Run the server using the following command
+14.  Run the server using the following command
       ``python3 manage.py runserver 0.0.0.0:8080``
 
 Deployment
