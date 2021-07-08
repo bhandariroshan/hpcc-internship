@@ -102,15 +102,15 @@ Setup Instructions
 
 11. Migrate the app using: 
 
-    ``sudo python3 manage.py migrate``
+     ``sudo python3 manage.py migrate``
 
 12. Create super user using the following:
 
-    ``sudo python3 manage.py createsuperuser``
+     ``sudo python3 manage.py createsuperuser``
 
 13. Run the server using the following command
 
-    ``sudo python3 manage.py runserver 0.0.0.0:8080``
+     ``sudo python3 manage.py runserver 0.0.0.0:8080``
 
 
 Deployment
