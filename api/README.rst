@@ -1,6 +1,4 @@
-api
-===
-
+# API
 Python and Django application to find cheapest region in Azure Spot and find average prirce of a azure instance.
 
 ## Setup Instructions
