@@ -69,7 +69,8 @@ Moved to `Live reloading and SASS compilation`_.
 Setup Instructions
 ------------------------------------------
 1. Update the linux machine using the following (optional if using windows):
-sudo apt update
+
+```sudo apt update```
 2. Install Python3 on your machine
 3. Install pip3 on your machine using following command (if it is missing)
 `sudo apt-get install python3-pip`
