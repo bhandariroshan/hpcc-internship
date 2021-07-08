@@ -1,7 +1,7 @@
 api
 ===
 
-Behold My Awesome Project!
+Python and Django application to find cheapest region in Azure Spot and find average prirce of a azure instance.
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg?logo=cookiecutter
      :target: https://github.com/pydanny/cookiecutter-django/
