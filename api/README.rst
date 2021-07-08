@@ -68,9 +68,9 @@ Moved to `Live reloading and SASS compilation`_.
 
 Setup Instructions
 ------------------------------------------
-1. Update the linux machine using the following (optional if using windows):
+1.  Update the linux machine using the following (optional if using windows):
 
-``sudo apt update``
+    ``sudo apt update``
 
 2. Install Python3 on your machine
 
