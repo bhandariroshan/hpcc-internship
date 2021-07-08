@@ -71,10 +71,10 @@ Setup Instructions
 1.  Update the linux machine using the following (optional if using windows):
      ``sudo apt update``
 
-2. Install Python3 on your machine
-3. Install pip3 on your machine using following command (if it is missing)
+2.  Install Python3 on your machine
+3.  Install pip3 on your machine using following command (if it is missing)
     ``sudo apt-get install python3-pip``
-4. Upgrade your pip using following command
+4.  Upgrade your pip using following command
     ``sudo python3 -m pip install -u pip``
 5. Install postgres database using the following command 
     ``sudo apt install postgresql postgresql-contrib``
