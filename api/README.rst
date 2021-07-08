@@ -29,7 +29,7 @@ Setting Up Your Users
 
 * To create an **superuser account**, use this command::
 
-    $ python manage.py createsuperuser
+  $ python manage.py createsuperuser
 
 For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
 
@@ -68,15 +68,15 @@ Moved to `Live reloading and SASS compilation`_.
 
 Setup Instructions
 ------------------------------------------
-1.  Update the linux machine using the following (optional if using windows):
-     ``sudo apt update``
+* 1. To update the linux machine using the following (optional if using windows):
+    $ sudo apt update``
     
-2.  Install Python3 on your machine
+* 2. Install Python3 on your machine
 
-3.  Install pip3 on your machine using following command (if it is missing)
+* 3. Install pip3 on your machine using following command (if it is missing)
      ``sudo apt-get install python3-pip``
 
-4.  Upgrade your pip using following command
+* 4. Upgrade your pip using following command
      ``sudo python3 -m pip install -u pip``
 
 5.  Install postgres database using the following command 
