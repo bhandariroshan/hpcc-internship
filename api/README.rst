@@ -14,19 +14,20 @@ Python and Django application to find cheapest region in Azure Spot and find ave
 
 Setup Instructions
 ------------------------------------------
-1. To update the linux machine using the following (optional if using windows):
+To update the linux machine using the following (optional if using windows):
+
 ```
 sudo apt update
 ```
-    
-2. Install Python3 on your machine
 
-3. Install pip3 on your machine using following command (if it is missing)
+Install Python3 on your machine
+
+Install pip3 on your machine using following command (if it is missing)
  ```
  sudo apt-get install python3-pip
  ```
 
-4. Upgrade your pip using following command
+Upgrade your pip using following command
 ```
 sudo python3 -m pip install -u pip
 ```
