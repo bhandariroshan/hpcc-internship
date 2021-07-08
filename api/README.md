@@ -1,6 +1,10 @@
 # API
 Python and Django application to find cheapest region in Azure Spot and find average prirce of a azure instance.
 
+## Tutorial
+1. To view in zoom: https://clemson.zoom.us/rec/play/uFiV2CCIpGdU_OWsm0IY2rzGw3gJNqTuKbsWEWUaplrVROg7TiQHy63lDa_64UYfeN2z1cc9rRpF9-u1.pMoG1gHiJrK1zoSK?continueMode=true
+2. To view in Google Drive: https://drive.google.com/file/d/1y3ebcV20C64Qbqr29pZHkTvtG_m83jqx/view
+
 ## Setup Instructions
 1. To update the linux machine using the following (optional if using windows):
 
