@@ -27,7 +27,7 @@ sudo apt install postgresql postgresql-contrib
 
 6. Loginto the postges using:
 ```
-sudo -u postgres
+sudo -i -u postgres
 ``` 
 
 7. Create database using:
@@ -46,7 +46,7 @@ ALTER USER postgres WITH PASSWORD 'admin';
 
 11. Install the requirements using the following instructions
 ```
-python3 -m pip install -r requirements.txt
+python3 -m pip install -r requirements/local.txt
 ```
 
 12. Migrate the app using: 
