@@ -88,7 +88,7 @@ Setup Instructions
 
 6. Loginto the postges and create database using:
 
-    ``sudo -u postgres createdb spotinstances``
+    ``sudo -u postgres `` and ``createdb spotinstances``
 
 7. Set password for user "postgres" using:
 
@@ -98,19 +98,19 @@ Setup Instructions
 9. Change directory into api folder.
 10. Install the requirements using the following instructions
 
-     ``sudo python3 -m pip install -r requirements.txt``
+     ``python3 -m pip install -r requirements.txt``
 
 11. Migrate the app using: 
 
-     ``sudo python3 manage.py migrate``
+     ``python3 manage.py migrate``
 
 12. Create super user using the following:
 
-     ``sudo python3 manage.py createsuperuser``
+     ``python3 manage.py createsuperuser``
 
 13. Run the server using the following command
 
-     ``sudo python3 manage.py runserver 0.0.0.0:8080``
+     ``python3 manage.py runserver 0.0.0.0:8080``
 
 
 Deployment
@@ -118,6 +118,12 @@ Deployment
 1. In the server setup using setup instructions
 2. Open port 80 using web admin portal
 3. Run the following command to run the server
-`sudo python3 manage.py runserver 0.0.0.0:8080`
+    ``sudo nohup python3 manage.py runserver 0.0.0.0:80 &`
+4. Run the cheapest operation on the browser using:
+    ``http://<public_ip_address>/price/?operation=cheapest&size=Standard_DS1_v2``
+5. Run the average price analysis using the following on the browser
+    ``https://
+4. Run the cheapest operation on the browser using:
+    ``http://<public_ip_address>/price/?operation=average&size=Standard_DS1_v2&region=eastus``
 
 The following details how to deploy this application.
