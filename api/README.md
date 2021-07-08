@@ -2,20 +2,20 @@
 Python and Django application to find cheapest region in Azure Spot and find average prirce of a azure instance.
 
 ## Setup Instructions
-To update the linux machine using the following (optional if using windows):
+1. To update the linux machine using the following (optional if using windows):
 
 ```
 sudo apt update
 ```
 
-Install Python3 on your machine
+2. Install Python3 on your machine
 
-Install pip3 on your machine using following command (if it is missing)
+3. Install pip3 on your machine using following command (if it is missing)
  ```
  sudo apt-get install python3-pip
  ```
 
-Upgrade your pip using following command
+4. Upgrade your pip using following command
 ```
 sudo python3 -m pip install -u pip
 ```
