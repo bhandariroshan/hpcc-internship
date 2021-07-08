@@ -172,3 +172,5 @@ print(f"Provisioned virtual machine {vm_result.name}")
 
 end = time.time()
 print("Time taken=", end-start)
+
+# Time taken= 116.62256789207458 in server
