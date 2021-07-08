@@ -83,7 +83,7 @@ Setup Instructions
      ``sudo apt install postgresql postgresql-contrib``
 
 6. Loginto the postges using:
-    ``sudo -u postgres `` 
+    ``sudo -u postgres`` 
 
 7. Create database using:
     ``createdb spotinstances``
