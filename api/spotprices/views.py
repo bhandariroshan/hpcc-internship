@@ -1,3 +1,5 @@
+import os
+import csv
 import json
 import math
 import requests
@@ -16,6 +18,23 @@ from django_pandas.io import read_frame
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.permissions import IsAuthenticated
 
+def find_eviction_probability(size):
+    data = {} 
+    with open('./eviction_probability.csv', 'r') as file:
+        reader = csv.DictReader(file)
+        line_count = 0
+        for row in reader:
+            if line_count == 0:
+                line_count += 1
+            else:
+                if 'Standard_' + row['VM Size'].strip() == size:
+                    for each_key in row:
+                        data[each_key] = row[each_key]
+
+    if not data:
+        data['message'] = 'Sorry, no data found.'
+
+    return data
 
 def find_cheapest_region_at_current_time_using_api(size, rank):
     size = size.replace('Standard_','').replace('_', ' ')
@@ -236,6 +255,9 @@ class PriceView(APIView):
         
         elif operation.lower() == 'average' and region and size and days:
             data = find_average_price_of_region_and_size(region, size, days)
+
+        elif operation.lower() == 'probability' and size:
+            data = find_eviction_probability(size)
         
         return JsonResponse({'items':data})
 
